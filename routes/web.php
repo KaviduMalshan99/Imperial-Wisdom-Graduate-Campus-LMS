@@ -12,6 +12,11 @@ Route::get('/teacher', function (){
     return view('TeacherDashboard.index');
 });
 
+//TeacherDashboard to-do list
+Route::get('/teacher/to-do', function (){
+    return view('TeacherDashboard.to-do');
+})->name('teacher.to-do');
+
 //Language Change
 Route::get('lang/{locale}', function ($locale) {
     if (!in_array($locale, ['en', 'de', 'es', 'fr', 'pt', 'cn', 'ae'])) {
