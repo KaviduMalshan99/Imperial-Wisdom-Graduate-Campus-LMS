@@ -8,9 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('/');
 
-Route::get('/teacher', function (){
-    return view('TeacherDashboard.index');
-});
+
 
 //Language Change
 Route::get('lang/{locale}', function ($locale) {
@@ -352,3 +350,17 @@ Route::get('/clear-cache', function () {
     Artisan::call('route:clear');
     return "Cache is cleared";
 })->name('clear.cache');
+
+
+// New Routes
+Route::get('/teacher', function (){
+    return view('TeacherDashboard.index');
+});
+
+Route::view('contactsTeach', 'TeacherDashboard.Contact.contacts')->name('contactsTeach');
+
+Route::prefix('teacher-profile')->group(function () {
+    Route::view('teach-profile', 'TeacherDashboard.Profile.user-profile')->name('teach-profile');
+    Route::view('edit-teach-profile', 'TeacherDashboard.Profile.edit-profile')->name('edit-teach-profile');
+    Route::view('teach-cards', 'TeacherDashboard.Profile.user-cards')->name('teach-cards');
+});

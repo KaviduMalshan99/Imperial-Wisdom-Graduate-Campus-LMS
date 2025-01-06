@@ -30,18 +30,15 @@
                             <h6 class="lan-1">General</h6>
                         </div>
                     </li>
-                    <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>
-                        <a class="sidebar-link sidebar-title"
-                            href="#">
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav"
+                            href="/teacher">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-home') }}"></use>
                             </svg><span class="lan-3">Dashboard</span></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="#">Online course</a></li>
-                        </ul>
                     </li>
 
                     <li class="sidebar-main-title">
@@ -61,9 +58,9 @@
 
                             <span>Profile</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a href="#">View Profile</a></li>
-                            <li><a href="#">Edit Profile</a></li>
-                            <li><a href="#">Profile Cards</a></li>
+                            <li><a href="{{ route('teach-profile') }}">View Profile</a></li>
+                            <li><a href="{{ route('edit-teach-profile') }}">Edit Profile</a></li>
+                            <li><a href="{{ route('teach-cards') }}">Profile Cards</a></li>
                         </ul>
                     </li>
 
@@ -110,7 +107,7 @@
 
 
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="#">
+                            class="sidebar-link sidebar-title link-nav" href="{{ route('contactsTeach') }}">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-contact') }}"></use>
                             </svg>
