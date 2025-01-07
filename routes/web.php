@@ -361,6 +361,7 @@ Route::view('contactsTeach', 'TeacherDashboard.Contact.contacts')->name('contact
 Route::view('teach-social-app', 'TeacherDashboard.SocialApp.social-app')->name('teach-social-app');
 Route::view('teach-calendar', 'TeacherDashboard.Calender.calendar-basic')->name('teach-calendar');
 Route::view('teach-to-do', 'TeacherDashboard.Todo.to-do')->name('teach-to-do');
+Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement'); // Announcemnet Route
 
 Route::prefix('teacher-profile')->group(function () {
     Route::view('teach-profile', 'TeacherDashboard.Profile.user-profile')->name('teach-profile');

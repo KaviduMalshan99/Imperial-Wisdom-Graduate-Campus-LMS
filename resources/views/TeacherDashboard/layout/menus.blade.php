@@ -1,14 +1,15 @@
 <div class="sidebar-wrapper" sidebar-layout="stroke-svg">
     <div>
         <div class="logo-wrapper"><a href="{{ route('index') }}"><img class="img-fluid for-light"
-                    src="{{ asset('assets/images/logo/logo.png') }}" alt=""><img class="img-fluid for-dark"
+                    src="{{ asset('assets/images/logo/campus-logo.png') }}" alt=""><img class="img-fluid for-dark"
                     src="{{ asset('assets/images/logo/logo_dark.png') }}" alt=""></a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
         </div>
 
-        <div class="logo-icon-wrapper"><a href="{{ route('index') }}"><img class="img-fluid"
-                    src="{{ asset('assets/images/logo/logo-icon.png') }}" alt=""></a>
+        <div class="logo-icon-wrapper"><a href="{{ route('index') }}">
+            <img style="height: 50px" class="img-fluid"
+                    src="{{ asset('assets/images/logo/small-logo.png') }}" alt=""></a>
         </div>
 
         <nav class="sidebar-main">
@@ -82,7 +83,7 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
-                        class="sidebar-link sidebar-title link-nav" href="#">
+                        class="sidebar-link sidebar-title link-nav" href="{{ route('teach-announcement') }}">
 
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-task') }}"></use>
