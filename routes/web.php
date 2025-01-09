@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Session;
 
+use App\Http\Controllers\CourseController; 
+
 Route::get('/', function () {
     return redirect()->route('index');
 })->name('/');
@@ -348,3 +350,11 @@ Route::get('/clear-cache', function () {
     Artisan::call('route:clear');
     return "Cache is cleared";
 })->name('clear.cache');
+
+
+
+
+Route::prefix('teacherDashbord')->group(function () {
+    //Route::view('dashboard-02', 'dashboard.dashboard-02')->name('dashboard-02');
+    Route::get('dashboard-02', [CourseController::class, 'index'])->name('dashboard-02');
+});
