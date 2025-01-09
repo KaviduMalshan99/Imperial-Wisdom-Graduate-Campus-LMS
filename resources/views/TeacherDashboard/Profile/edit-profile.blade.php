@@ -1,4 +1,4 @@
-@extends('layouts.simple.master')
+@extends('TeacherDashboard.layout.sidebar')
 @section('title', 'Edit Profile')
 
 @section('css')

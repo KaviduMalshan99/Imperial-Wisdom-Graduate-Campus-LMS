@@ -80,8 +80,8 @@
                             <h6 class="lan-8">Applications</h6>
                         </div>
                     </li>
-                    
-                    
+
+
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title"
                             href="#">
                             <svg class="stroke-icon">
@@ -158,7 +158,8 @@
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-contact') }}"> </use>
-                            </svg><span>Contacts</span></a></li>
+                            </svg><span>Contacts</span></a>
+                    </li>
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
                             class="sidebar-link sidebar-title link-nav" href="{{ route('task') }}">
                             <svg class="stroke-icon">
@@ -602,7 +603,7 @@
                             <li><a href="{{ route('gallery-hover') }}">Hover Effects</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="{{ route('faq') }}">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-faq') }}"></use>
