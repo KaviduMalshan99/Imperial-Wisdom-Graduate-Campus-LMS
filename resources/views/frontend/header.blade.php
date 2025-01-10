@@ -34,50 +34,50 @@
                                 <li>
                                     <a href="#0">Home</a>
                                     <ul class="lab-ul">
-                                        <li><a href="index.html" class="active">Home One</a></li>
-                                        <li><a href="index-2.html">Home Two</a></li>
-                                        <li><a href="index-3.html">Home Three</a></li>
-                                        <li><a href="index-4.html">Home Four</a></li>
-                                        <li><a href="index-5.html">Home Five</a></li>
-                                        <li><a href="index-6.html">Home Six</a></li>
-                                        <li><a href="index-7.html">Home Seven</a></li>
+                                        <li><a href="{{route('frontend.home')}}" class="active">Home One</a></li>
+                                        <li><a href="{{route('frontend.Home_Two')}}">Home Two</a></li>
+                                        <li><a href="{{route('frontend.Home_Three')}}">Home Three</a></li>
+                                        <li><a href="{{route('frontend.Home_Four')}}">Home Four</a></li>
+                                        <li><a href="{{route('frontend.Home_Five')}}">Home Five</a></li>
+                                        <li><a href="{{route('frontend.Home_Six')}}">Home Six</a></li>
+                                        <li><a href="{{route('frontend.Home_Seven')}}">Home Seven</a></li>
                                     </ul>
                                 </li>
                                 
                                 <li>
                                     <a href="#0">Courses</a>
                                     <ul class="lab-ul">
-                                        <li><a href="course.html">Course</a></li>
-                                        <li><a href="course-single.html">Course Details</a></li>
+                                        <li><a href="{{route('frontend.Course')}}">Course</a></li>
+                                        <li><a href="{{route('frontend.Course_Details')}}">Course Details</a></li>
     
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#0">Blog</a>
                                     <ul class="lab-ul">
-                                        <li><a href="blog.html">Blog Grid</a></li>
-                                        <li><a href="blog-2.html">Blog Style 2</a></li>
-                                        <li><a href="blog-3.html">Blog Style 3</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                        <li><a href="{{route('frontend.blog')}}">Blog Grid</a></li>
+                                        <li><a href="{{route('frontend.blog_style2')}}">Blog Style 2</a></li>
+                                        <li><a href="{{route('frontend.blog_style3')}}">Blog Style 3</a></li>
+                                        <li><a href="{{route('frontend.blog_single')}}">Blog Single</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#0">Pages</a>
                                     <ul class="lab-ul">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="instructor.html">Instructor</a></li>
+                                        <li><a href="{{route('frontend.about')}}">About</a></li>
+                                        <li><a href="{{route('frontend.team')}}">Team</a></li>
+                                        <li><a href="{{route('frontend.instructor')}}">Instructor</a></li>
                                         <li>
                                             <a href="#0">Shop Pages</a>
                                             <ul class="lab-ul">
-                                                <li><a href="shop.html">Shop Page</a></li>
-                                                <li><a href="shop-single.html">Shop Details Page</a></li>
-                                                <li><a href="cart-page.html">Shop Cart Page</a></li>
+                                                <li><a href="{{route('frontend.shop')}}">Shop Page</a></li>
+                                                <li><a href="{{route('frontend.shop_single')}}">Shop Details Page</a></li>
+                                                <li><a href="{{route('frontend.cart_page')}}">Shop Cart Page</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="search-page.html">Search Page</a></li>
-                                        <li><a href="search-none.html">Search None</a></li>
-                                        <li><a href="404.html">404</a></li>
+                                        <li><a href="{{route('frontend.search_page')}}">Search Page</a></li>
+                                        <li><a href="{{route('frontend.search_none')}}">Search None</a></li>
+                                        <li><a href="{{route('frontend.404')}}">404</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact.html">Contact</a></li>
