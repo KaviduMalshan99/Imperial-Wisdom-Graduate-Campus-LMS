@@ -80,12 +80,12 @@
                                         <li><a href="{{route('frontend.404')}}">404</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('frontend.contact')}}">Contact</a></li>
                             </ul>
                         </div>
                         
-                        <a href="login.html" class="login"><i class="icofont-user"></i> <span>LOG IN</span> </a>
-                        <a href="signup.html" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span> </a>
+                        <a href="{{route('frontend.login')}}" class="login"><i class="icofont-user"></i> <span>LOG IN</span> </a>
+                        <a href="{{route('frontend.signup')}}" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span> </a>
 
                         <!-- toggle icons -->
                         <div class="header-bar d-lg-none">
