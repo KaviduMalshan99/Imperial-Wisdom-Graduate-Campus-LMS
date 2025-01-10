@@ -101,6 +101,18 @@ class FrontendTemplateController extends Controller
     {
         return view('frontend.404');
     }
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
+    public function login()
+    {
+        return view('frontend.login');
+    }
+    public function signup()
+    {
+        return view('frontend.signup');
+    }
 
 
 
