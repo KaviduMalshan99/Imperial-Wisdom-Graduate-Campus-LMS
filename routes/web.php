@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\LectureController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Session;
@@ -367,4 +369,14 @@ Route::prefix('teacher-profile')->group(function () {
     Route::view('teach-profile', 'TeacherDashboard.Profile.user-profile')->name('teach-profile');
     Route::view('edit-teach-profile', 'TeacherDashboard.Profile.edit-profile')->name('edit-teach-profile');
     Route::view('teach-cards', 'TeacherDashboard.Profile.user-cards')->name('teach-cards');
+});
+
+Route::prefix('teach-announcement')->group(function () {
+    Route::get('index', [AnnouncementController::class,'index'])->name('announcement.index');
+    Route::post('index/store', [AnnouncementController::class,'store'])->name('announcement.store');
+});
+
+Route::prefix('lecture')->group(function () {
+    Route::get('index', [LectureController::class,'index'])->name('lecture.index');
+    Route::post('index/store', [LectureController::class,'store'])->name('lecture.store');
 });

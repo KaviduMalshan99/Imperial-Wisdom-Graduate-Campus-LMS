@@ -24,13 +24,14 @@
                     <div class="card-header">
                         <h5>Create Announcment</h5>
                     </div>
-                    <form class="form theme-form">
+                    <form action="{{ route('announcement.store') }}" method="POST" class="form theme-form">
+                        @csrf
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3">
                                         <label class="form-label" for="exampleFormControlInput1">Announcment</label>
-                                        <input class="form-control" id="exampleFormControlInput1" type="text"
+                                        <input class="form-control" id="exampleFormControlInput1" type="text" name="announcement"
                                             placeholder="Enter the Announcment">
                                     </div>
                                 </div>
@@ -39,7 +40,7 @@
                                 <div class="col">
                                     <div class="mb-3">
                                         <label class="form-label" for="exampleFormControlSelect9">Select Name of the Cource</label>
-                                        <select class="form-select digits" id="exampleFormControlSelect9">
+                                        <select class="form-select digits" id="exampleFormControlSelect9" name="course_id">
                                             <option>--Select Name of the Cource--</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -54,8 +55,24 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3">
+                                        <label class="form-label" for="exampleFormControlSelect9">Select Name of the Lecture</label>
+                                        <select class="form-select digits" id="exampleFormControlSelect9" name="lecture_id">
+                                            <option>--Select Name of the Lecture--</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
                                         <label class="form-label" for="exampleFormControlSelect9">Select Announcement target audience</label>
-                                        <select class="form-select digits" id="exampleFormControlSelect9">
+                                        <select class="form-select digits" id="exampleFormControlSelect9" name="target_audience">
                                             <option>-- Select method you want--</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -71,7 +88,7 @@
                                 <div class="col">
                                     <div>
                                         <label class="form-label" for="exampleFormControlTextarea4">Message</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+                                        <textarea class="form-control" id="exampleFormControlTextarea4" name="message" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -96,12 +113,16 @@
                             </tr>
                           </thead>
                           <tbody>
+                            @foreach($announcements as $announcement)
                             <tr class="border-bottom-secondary">
-                              <th scope="row">1</th>
-                              <td> Ram Jacob</td>
+                              <td>{{ $loop->iteration }}</td>
+                              <td> {{ $announcements->announcement }}</td>
+                              <td> {{ $announcements->course_id }}</td>
+                              <td> {{ $announcements->message }}</td>
                               <td>Wolfe</td>
                               <td>RamJacob@twitter</td>
                             </tr>
+                            @endforeach
                           </tbody>
                         </table>
                       </div>
