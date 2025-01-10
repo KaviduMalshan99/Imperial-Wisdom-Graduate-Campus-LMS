@@ -405,6 +405,9 @@ Route::get('/cart_page', [FrontendTemplateController::class, 'cart_page'])->name
 Route::get('/search_page', [FrontendTemplateController::class, 'search_page'])->name('frontend.search_page');
 Route::get('/search_none', [FrontendTemplateController::class, 'search_none'])->name('frontend.search_none');
 Route::get('/404', [FrontendTemplateController::class, 'error'])->name('frontend.404');
+Route::get('/contact', [FrontendTemplateController::class, 'contact'])->name('frontend.contact');
+Route::get('/login', [FrontendTemplateController::class, 'login'])->name('frontend.login');
+Route::get('/signup', [FrontendTemplateController::class, 'signup'])->name('frontend.signup');
 
 
 
