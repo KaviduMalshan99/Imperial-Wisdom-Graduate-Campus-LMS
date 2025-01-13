@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Session;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('/');
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\FrontendTemplateController;
+
+
 
 
 
@@ -354,29 +355,29 @@ Route::get('/clear-cache', function () {
 })->name('clear.cache');
 
 
+
+
+
+Route::prefix('teacherDashbord')->group(function () {
+    //Route::view('dashboard-02', 'dashboard.dashboard-02')->name('dashboard-02');
+    Route::get('dashboard-02', [CourseController::class, 'index'])->name('dashboard-02');
+    Route::view('contactsTeach', 'TeacherDashboard.Contact.contacts')->name('contactsTeach');
+    Route::view('teach-social-app', 'TeacherDashboard.SocialApp.social-app')->name('teach-social-app');
+    Route::view('teach-calendar', 'TeacherDashboard.Calender.calendar-basic')->name('teach-calendar');
+    Route::view('teach-to-do', 'TeacherDashboard.Todo.to-do')->name('teach-to-do');
+    Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement');
+});
+
 // New Routes
 Route::get('/teacher', function (){
     return view('TeacherDashboard.index');
 });
 
-Route::view('contactsTeach', 'TeacherDashboard.Contact.contacts')->name('contactsTeach');
-Route::view('teach-social-app', 'TeacherDashboard.SocialApp.social-app')->name('teach-social-app');
-Route::view('teach-calendar', 'TeacherDashboard.Calender.calendar-basic')->name('teach-calendar');
-Route::view('teach-to-do', 'TeacherDashboard.Todo.to-do')->name('teach-to-do');
-Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement'); // Announcemnet Route
+// Announcemnet Route
 
 Route::prefix('teacher-profile')->group(function () {
     Route::view('teach-profile', 'TeacherDashboard.Profile.user-profile')->name('teach-profile');
     Route::view('edit-teach-profile', 'TeacherDashboard.Profile.edit-profile')->name('edit-teach-profile');
     Route::view('teach-cards', 'TeacherDashboard.Profile.user-cards')->name('teach-cards');
-});
 
-Route::prefix('teach-announcement')->group(function () {
-    Route::get('index', [AnnouncementController::class,'index'])->name('announcement.index');
-    Route::post('index/store', [AnnouncementController::class,'store'])->name('announcement.store');
-});
-
-Route::prefix('lecture')->group(function () {
-    Route::get('index', [LectureController::class,'index'])->name('lecture.index');
-    Route::post('index/store', [LectureController::class,'store'])->name('lecture.store');
 });
