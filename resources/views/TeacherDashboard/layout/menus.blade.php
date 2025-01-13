@@ -1,14 +1,15 @@
 <div class="sidebar-wrapper" sidebar-layout="stroke-svg">
     <div>
         <div class="logo-wrapper"><a href="{{ route('index') }}"><img class="img-fluid for-light"
-                    src="{{ asset('assets/images/logo/logo.png') }}" alt=""><img class="img-fluid for-dark"
+                    src="{{ asset('assets/images/logo/campus-logo.png') }}" alt=""><img class="img-fluid for-dark"
                     src="{{ asset('assets/images/logo/logo_dark.png') }}" alt=""></a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
         </div>
 
-        <div class="logo-icon-wrapper"><a href="{{ route('index') }}"><img class="img-fluid"
-                    src="{{ asset('assets/images/logo/logo-icon.png') }}" alt=""></a>
+        <div class="logo-icon-wrapper"><a href="{{ route('index') }}">
+            <img style="height: 50px" class="img-fluid"
+                    src="{{ asset('assets/images/logo/small-logo.png') }}" alt=""></a>
         </div>
 
         <nav class="sidebar-main">
@@ -30,18 +31,15 @@
                             <h6 class="lan-1">General</h6>
                         </div>
                     </li>
-                    <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>
-                        <label class="badge badge-light-primary">5</label><a class="sidebar-link sidebar-title"
-                            href="#">
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav"
+                            href="/teacher">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-home') }}"></use>
                             </svg><span class="lan-3">Dashboard</span></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="#">Online course</a></li>
-                        </ul>
                     </li>
 
                     <li class="sidebar-main-title">
@@ -61,9 +59,9 @@
 
                             <span>Profile</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a href="#">View Profile</a></li>
-                            <li><a href="#">Edit Profile</a></li>
-                            <li><a href="#">Profile Cards</a></li>
+                            <li><a href="{{ route('teach-profile') }}">View Profile</a></li>
+                            <li><a href="{{ route('edit-teach-profile') }}">Edit Profile</a></li>
+                            <li><a href="{{ route('teach-cards') }}">Profile Cards</a></li>
                         </ul>
                     </li>
 
@@ -85,7 +83,9 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
+
                         class="sidebar-link sidebar-title link-nav" href="{{ route('teacher.announcment') }}">
+
 
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-task') }}"></use>
@@ -110,32 +110,42 @@
 
 
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="#">
+                            class="sidebar-link sidebar-title link-nav" href="{{ route('contactsTeach') }}">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-contact') }}"></use>
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-contact') }}"> </use>
-                            </svg><span>Contacts</span></a></li>
+                            </svg>
+                            <span>Contacts</span></a>
+                    </li>
 
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="#">
+                            class="sidebar-link sidebar-title link-nav" href="{{ route('teach-calendar') }}">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-calendar') }}"></use>
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-calender') }}"></use>
-                            </svg><span>Calendar</span></a></li>
+                            </svg><span>Calendar</span></a>
+                    </li>
+
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="#">
+                            class="sidebar-link sidebar-title link-nav" href="{{ route('teach-social-app') }}">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-social') }}"></use>
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-social') }}"> </use>
-                            </svg><span>Social App</span></a></li>
+                            </svg><span>Social App</span></a>
+                    </li>
+
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
+
                         class="sidebar-link sidebar-title link-nav" href="{{ route('teacher.to-do') }}">
+
+                        class="sidebar-link sidebar-title link-nav" href="{{ route('teach-to-do') }}">
+
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-to-do') }}"></use>
                         </svg>
