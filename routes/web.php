@@ -11,6 +11,16 @@ use App\Http\Controllers\FrontendTemplateController;
 
 
 
+//TeacherDashboard to-do list
+Route::get('/teacher/to-do', function (){
+    return view('TeacherDashboard.to-do');
+})->name('teacher.to-do');
+
+//TeacherDashboard announcment
+Route::get('/teacher/announcment', function (){
+    return view('TeacherDashboard.announcment');
+})->name('teacher.announcment');
+
 //Language Change
 Route::get('lang/{locale}', function ($locale) {
     if (!in_array($locale, ['en', 'de', 'es', 'fr', 'pt', 'cn', 'ae'])) {
