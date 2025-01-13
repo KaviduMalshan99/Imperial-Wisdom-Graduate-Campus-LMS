@@ -1,11 +1,15 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\LectureController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Session;
 
-use App\Http\Controllers\CourseController; 
+
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\FrontendTemplateController;
+
 
 
 
@@ -373,7 +377,8 @@ Route::prefix('teacherDashbord')->group(function () {
     Route::view('teach-social-app', 'TeacherDashboard.SocialApp.social-app')->name('teach-social-app');
     Route::view('teach-calendar', 'TeacherDashboard.Calender.calendar-basic')->name('teach-calendar');
     Route::view('teach-to-do', 'TeacherDashboard.Todo.to-do')->name('teach-to-do');
-    Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement'); 
+    Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement');
+
 });
 
 // New Routes
