@@ -6,12 +6,24 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Session;
 
+
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\FrontendTemplateController;
 
 
 
 
+
+
+//TeacherDashboard to-do list
+Route::get('/teacher/to-do', function (){
+    return view('TeacherDashboard.to-do');
+})->name('teacher.to-do');
+
+//TeacherDashboard announcment
+Route::get('/teacher/announcment', function (){
+    return view('TeacherDashboard.announcment');
+})->name('teacher.announcment');
 
 //Language Change
 Route::get('lang/{locale}', function ($locale) {
@@ -366,6 +378,7 @@ Route::prefix('teacherDashbord')->group(function () {
     Route::view('teach-calendar', 'TeacherDashboard.Calender.calendar-basic')->name('teach-calendar');
     Route::view('teach-to-do', 'TeacherDashboard.Todo.to-do')->name('teach-to-do');
     Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement');
+
 });
 
 // New Routes
@@ -381,3 +394,11 @@ Route::prefix('teacher-profile')->group(function () {
     Route::view('teach-cards', 'TeacherDashboard.Profile.user-cards')->name('teach-cards');
 
 });
+
+
+// frontend
+Route::get('/', [FrontendTemplateController::class, 'index'])->name('frontend.home');
+
+
+
+
