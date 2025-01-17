@@ -400,5 +400,3 @@ Route::prefix('teacher-profile')->group(function () {
 Route::get('/', [FrontendTemplateController::class, 'index'])->name('frontend.home');
 
 
-
-
