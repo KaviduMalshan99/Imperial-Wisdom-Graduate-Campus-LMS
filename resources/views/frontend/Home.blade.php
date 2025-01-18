@@ -5,22 +5,23 @@
 @section('content')
     <!-- banner section start here -->
     <section class="banner-section style-1">
-        <div class="container">
+        <div class="container"  style="background-image: url('{{ asset('assets/images/bg.jpg') }}'); 
+        background-size: cover; background-position: center; background-repeat: no-repeat; width: 1920px; height: auto;">
             <div class="section-wrapper">
                 <div class="row align-items-center">
                     <div class="col-xxl-5 col-xl-6 col-lg-10">
                         <div class="banner-content">
-                            <h6 class="subtitle text-uppercase fw-medium">Online education</h6>
-                            <h2 class="title"><span class="d-lg-block">Learn The</span> Skills You Need <span class="d-lg-block">To Succeed</span></h2>
-                            <p class="desc">Free online courses from the world’s Leading experts. join 18+ million Learners today.</p>
+                            <h6 class="subtitle text-uppercase fw-medium" style="color:#ed3532;">Online education</h6>
+                            <h2 class="title" style="color:#1b2954;"><span class="d-lg-block">Learn The</span> Skills You Need <span class="d-lg-block">To Succeed</span></h2>
+                            <p class="desc">Free online courses from the world’s<br> Leading experts.<br> join 18+ million Learners today.</p>
                             <form action="/">
                                 <div class="banner-icon">
-                                    <i class="icofont-search"></i>
+                                    <i class="icofont-search"></i> 
                                 </div>
-                                <input type="text" placeholder="Keywords of your course">
-                                <button type="submit">Search Course</button>
+                                <input type="text" placeholder="Keywords of your course" style="background-color:#e5e7eb";>
+                                <button type="submit" style="background-color:#edb21e; color:#111827;">Search Course</button>
                             </form>
-                            <div class="banner-catagory d-flex flex-wrap">
+                            <div class="banner-catagory d-flex flex-wrap" style="margin: top 40px;">
                                 <p>Most Popular : </p>
                                 <ul class="lab-ul d-flex flex-wrap">
                                     <li><a href="#">Figma</a></li>
@@ -33,7 +34,9 @@
                     </div>
                     <div class="col-xxl-7 col-xl-6">
                         <div class="banner-thumb">
-                            <img src="assets/images/banner/01.png" alt="img">
+                        <video autoplay loop muted playsinline style="animation: none; display: block; width: 350px; height: auto;">
+                            <source src="{{asset('assets/images/lms.mp4')}}" type="video/mp4">
+                        </video>  
                         </div>
                     </div>
                 </div>
@@ -113,8 +116,8 @@
     <div class="category-section padding-tb">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Popular Category</span>
-                <h2 class="title">Popular Category For Learn</h2>
+                <span class="subtitle" style="color:#ed3532;">Popular Category</span>
+                <h2 class="title" style="color:#1b2954;">Popular Category For Learn</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row g-2 justify-content-center row-cols-xl-6 row-cols-md-3 row-cols-sm-2 row-cols-1">
@@ -209,9 +212,9 @@
     <!-- course section start here -->
     <div class="course-section padding-tb section-bg">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle">Featured Courses</span>
-                <h2 class="title">Pick A Course To Get Started</h2>
+            <div class="section-header text-center" >
+                <span class="subtitle" style="color:#ed3532;">Featured Courses</span>
+                <h2 class="title"  style="color:#1b2954;">Pick A Course To Get Started</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row g-4 justify-content-center row-cols-xl-3 row-cols-md-2 row-cols-1">
@@ -487,15 +490,15 @@
                 <div class="col">
                     <div class="about-right padding-tb">
                         <div class="section-header">
-                            <span class="subtitle">About Our Edukon</span>
-                            <h2 class="title">Good Qualification Services And Better Skills</h2>
+                            <span class="subtitle" style="color:#ed3532;">About Our Edukon</span>
+                            <h2 class="title"  style="color:#1b2954;">Good Qualification Services And Better Skills</h2>
                             <p>Distinctively provide acces mutfuncto users whereas transparent proceses somes ncentivize eficient functionalities rather than extensible archtectur communicate leveraged services and cross-platform.</p>
                         </div>
                         <div class="section-wrapper">
                             <ul class="lab-ul">
                                 <li>
                                     <div class="sr-left">
-                                        <img src="assets/images/about/icon/01.jpg" alt="about icon">
+                                        <img src="{{ asset('assets/images/skill.jpeg') }}" alt="about icon">
                                     </div>
                                     <div class="sr-right">
                                         <h5>Skilled Instructors</h5>
@@ -504,7 +507,7 @@
                                 </li>
                                 <li>
                                     <div class="sr-left">
-                                        <img src="assets/images/about/icon/02.jpg" alt="about icon">
+                                        <img src="{{ asset('assets/images/certificate.jpeg') }}" alt="about icon">
                                     </div>
                                     <div class="sr-right">
                                         <h5>Get Certificate</h5>
@@ -513,7 +516,7 @@
                                 </li>
                                 <li>
                                     <div class="sr-left">
-                                        <img src="assets/images/about/icon/03.jpg" alt="about icon">
+                                        <img src="{{ asset('assets/images/online.jpeg') }}" alt="about icon">
                                     </div>
                                     <div class="sr-right">
                                         <h5>Online Classes</h5>
@@ -527,7 +530,7 @@
                 <div class="col">
                     <div class="about-left">
                         <div class="about-thumb">
-                            <img src="assets/images/about/01.png" alt="about">
+                            <img src="{{asset('assets/images/habout.gif')}}" alt="about" style="height:600px; width:auto;">
                         </div>
                     </div>
                 </div>
@@ -541,8 +544,8 @@
     <div class="instructor-section padding-tb section-bg">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">World-class Instructors</span>
-                <h2 class="title">Classes Taught By Real Creators</h2>
+                <span class="subtitle" style="color:#ed3532;">World-class Instructors</span>
+                <h2 class="title" style="color:#1b2954;">Classes Taught By Real Creators</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
@@ -664,8 +667,8 @@
     <div class="student-feedbak-section padding-tb shape-img">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Loved by 200,000+ students</span>
-                <h2 class="title">Students Community Feedback</h2>
+                <span class="subtitle" style="color:#ed3532;">Loved by 200,000+ students</span>
+                <h2 class="title" style="color:#1b2954;">Students Community Feedback</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row justify-content-center row-cols-lg-2 row-cols-1">
@@ -744,8 +747,8 @@
     <div class="blog-section padding-tb section-bg">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">FORM OUR BLOG POSTS</span>
-                <h2 class="title">More Articles From Resource Library</h2>
+                <span class="subtitle" style="color:#ed3532;">FORM OUR BLOG POSTS</span>
+                <h2 class="title"style="color:#1b2954;">More Articles From Resource Library</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4">
@@ -844,8 +847,8 @@
     <div class="achievement-section padding-tb">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">START TO SUCCESS</span>
-                <h2 class="title">Achieve Your Goals With Edukon</h2>
+                <span class="subtitle" style="color:#ed3532;"  >START TO SUCCESS</span>
+                <h2 class="title" style="color:#1b2954;">Achieve Your Goals With Edukon</h2>
             </div>
             <div class="section-wrapper">
                 <div class="counter-part mb-4">
