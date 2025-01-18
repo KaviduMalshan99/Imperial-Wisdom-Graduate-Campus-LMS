@@ -113,6 +113,14 @@ class FrontendTemplateController extends Controller
     {
         return view('frontend.signup');
     }
+    public function team_single()
+    {
+        return view('frontend.team_single');
+    }
+    public function forgetpass()
+    {
+        return view('frontend.forgetpass');
+    }
 
 
 
