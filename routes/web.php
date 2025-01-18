@@ -408,6 +408,7 @@ Route::get('/404', [FrontendTemplateController::class, 'error'])->name('frontend
 Route::get('/contact', [FrontendTemplateController::class, 'contact'])->name('frontend.contact');
 Route::get('/login', [FrontendTemplateController::class, 'login'])->name('frontend.login');
 Route::get('/signup', [FrontendTemplateController::class, 'signup'])->name('frontend.signup');
-
+Route::get('/team_single', [FrontendTemplateController::class, 'team_single'])->name('frontend.team_single');
+Route::get('/forgetpass', [FrontendTemplateController::class, 'forgetpass'])->name('frontend.forgetpass');
 
 
