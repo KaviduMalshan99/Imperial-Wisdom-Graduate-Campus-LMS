@@ -37,7 +37,7 @@
                                     <img src="assets/images/instructor/01.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Emilee Logan</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Emilee Logan</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
@@ -63,7 +63,7 @@
                                     <img src="assets/images/instructor/02.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Donald Logan</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Donald Logan</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
@@ -89,7 +89,7 @@
                                     <img src="assets/images/instructor/03.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Oliver Porter</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Oliver Porter</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
@@ -115,7 +115,7 @@
                                     <img src="assets/images/instructor/04.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Nahla Jones</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Nahla Jones</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
@@ -141,7 +141,7 @@
                                     <img src="assets/images/instructor/05.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Tomi Hensley</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Tomi Hensley</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
@@ -167,7 +167,7 @@
                                     <img src="assets/images/instructor/06.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Foley Patrik</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Foley Patrik</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
@@ -193,7 +193,7 @@
                                     <img src="assets/images/instructor/07.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Lily Forster</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Lily Forster</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
@@ -219,7 +219,7 @@
                                     <img src="assets/images/instructor/08.jpg" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Alex Itzel</h4></a>
+                                    <a href="{{route('frontend.team_single')}}"><h4>Alex Itzel</h4></a>
                                     <p>Master of Education Degree</p>
                                     <span class="ratting">
                                         <i class="icofont-ui-rating"></i>
