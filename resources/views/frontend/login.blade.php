@@ -42,7 +42,7 @@
                                 <input type="checkbox" name="remember" id="remember">
                                 <label for="remember">Remember Me</label>
                             </div>
-                            <a href="forgetpass.html">Forget Password?</a>
+                            <a href="{{route('frontend.forgetpass')}}">Forget Password?</a>
                         </div>
                     </div>
                     <div class="form-group text-center">
