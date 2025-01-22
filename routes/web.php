@@ -397,6 +397,9 @@ Route::prefix('teacher-profile')->group(function () {
 
 
 // frontend
+
+Route::get('/', [FrontendTemplateController::class, 'index'])->name('frontend.home');
+
 //Route::get('/', [FrontendTemplateController::class, 'index'])->name('frontend.Home');
 Route::get('/', [FrontendTemplateController::class, 'home'])->name('frontend.home');
 Route::get('/Home_Two', [FrontendTemplateController::class, 'Home_Two'])->name('frontend.Home_Two');
@@ -425,5 +428,6 @@ Route::get('/login', [FrontendTemplateController::class, 'login'])->name('fronte
 Route::get('/signup', [FrontendTemplateController::class, 'signup'])->name('frontend.signup');
 Route::get('/team_single', [FrontendTemplateController::class, 'team_single'])->name('frontend.team_single');
 Route::get('/forgetpass', [FrontendTemplateController::class, 'forgetpass'])->name('frontend.forgetpass');
+
 
 
