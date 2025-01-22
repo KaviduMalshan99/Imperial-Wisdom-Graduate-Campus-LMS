@@ -83,7 +83,8 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
-                        class="sidebar-link sidebar-title link-nav" href="{{ route('teach-announcement') }}">
+
+                        class="sidebar-link sidebar-title link-nav" href="{{ route('announcement.index') }}">
 
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-task') }}"></use>
@@ -139,14 +140,19 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a
+
+                        class="sidebar-link sidebar-title link-nav" href="{{ route('teacher.to-do') }}">
+
                         class="sidebar-link sidebar-title link-nav" href="{{ route('teach-to-do') }}">
+
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-to-do') }}"></use>
                         </svg>
 
                         <svg class="fill-icon">
                             <use href="{{ asset('assets/svg/icon-sprite.svg#fill-to-do') }}"> </use>
-                        </svg><span>To-Do</span></a>
+                        </svg>
+                        <span> To-Do </span>
                     </li>
                 </ul>
             </div>

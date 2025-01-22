@@ -1,3 +1,6 @@
+
+@include('TeacherDashboard.layout.sidebar')
+
 @extends('TeacherDashboard.layout.sidebar')
 @section('title', 'Ecommerce')
 
@@ -371,3 +374,4 @@
     <script src="{{ asset('assets/js/datepicker/date-picker/datepicker.custom.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard/dashboard_3.js') }}"></script>
 @endsection
+
