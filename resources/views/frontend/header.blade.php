@@ -205,25 +205,35 @@
                                     <li><a href="{{ route('frontend.Home_Seven') }}">Home Seven</a></li>
                                 </ul>
                             </li>
+
                             <li>
+                                <a href="{{ route('frontend.about') }}">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#0">Study Abroad</a>
+                            </li>
+                            <li>
+                                <a href="#0">Pay Online</a>
+                            </li>
+                           <!-- <li>
                                 <a href="#0">Courses</a>
                                 <ul class="lab-ul">
                                     <li><a href="{{ route('frontend.Course') }}">Course</a></li>
                                     <li><a href="{{ route('frontend.Course_Details') }}">Course Details</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li>
                             <li class="{{ Request::is('blog*') ? 'active' : '' }}">
-                                <a href="#0" class="curved">Blog</a>
+                                <a href="#0" class="curved">Blogs</a>
                                 <ul class="lab-ul">
-                                    <li class="{{ Request::is('blog*') ? 'active' : '' }}"><a href="{{ route('frontend.blog') }}"  class="curved">Blog Grid</a></li>
+                                    <li class="{{ Request::is('blog*') ? 'active' : '' }}"><a href="{{ route('frontend.blog') }}"  class="curved">Blog</a></li>
                                     <li><a href="{{ route('frontend.blog_style2') }}">Blog Style 2</a></li>
                                     <li><a href="{{ route('frontend.blog_style3') }}">Blog Style 3</a></li>
                                     <li><a href="{{ route('frontend.blog_single') }}">Blog Single</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#0">Pages</a>
+                            <!--    <a href="#0">Pages</a>
                                 <ul class="lab-ul">
                                     <li><a href="{{ route('frontend.about') }}">About</a></li>
                                     <li><a href="{{ route('frontend.team') }}">Team</a></li>
@@ -240,12 +250,12 @@
                                     <li><a href="{{ route('frontend.search_none') }}">Search None</a></li>
                                     <li><a href="{{ route('frontend.404') }}">404</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
                         </ul>
                     </div>
-                    <a href="{{ route('frontend.login') }}" class="login"><i class="icofont-user"></i> <span>LOG IN</span></a>
-                    <a href="{{ route('frontend.signup') }}" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span></a>
+                    <!--<a href="{{ route('frontend.login') }}" class="login"><i class="icofont-user"></i> <span>LOG IN</span></a>
+                    <a href="{{ route('frontend.signup') }}" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span></a> -->
 
                     <!-- toggle icons -->
                     <div class="header-bar d-lg-none">
