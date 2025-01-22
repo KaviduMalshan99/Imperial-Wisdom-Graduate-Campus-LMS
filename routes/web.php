@@ -397,8 +397,33 @@ Route::prefix('teacher-profile')->group(function () {
 
 
 // frontend
-Route::get('/', [FrontendTemplateController::class, 'index'])->name('frontend.home');
-
-
+//Route::get('/', [FrontendTemplateController::class, 'index'])->name('frontend.Home');
+Route::get('/', [FrontendTemplateController::class, 'home'])->name('frontend.home');
+Route::get('/Home_Two', [FrontendTemplateController::class, 'Home_Two'])->name('frontend.Home_Two');
+Route::get('/Home_Three', [FrontendTemplateController::class, 'Home_Three'])->name('frontend.Home_Three');
+Route::get('/Home_Four', [FrontendTemplateController::class, 'Home_Four'])->name('frontend.Home_Four');
+Route::get('/Home_Five', [FrontendTemplateController::class, 'Home_Five'])->name('frontend.Home_Five');
+Route::get('/Home_Six', [FrontendTemplateController::class, 'Home_Six'])->name('frontend.Home_Six');
+Route::get('/Home_Seven', [FrontendTemplateController::class, 'Home_Seven'])->name('frontend.Home_Seven');
+Route::get('/Course', [FrontendTemplateController::class, 'Course'])->name('frontend.Course');
+Route::get('/Course_Details', [FrontendTemplateController::class, 'Course_Details'])->name('frontend.Course_Details');
+Route::get('/blog', [FrontendTemplateController::class, 'blog'])->name('frontend.blog');
+Route::get('/blog_style2', [FrontendTemplateController::class, 'blog_style2'])->name('frontend.blog_style2');
+Route::get('/blog_style3', [FrontendTemplateController::class, 'blog_style3'])->name('frontend.blog_style3');
+Route::get('/blog_single', [FrontendTemplateController::class, 'blog_single'])->name('frontend.blog_single');
+Route::get('/about', [FrontendTemplateController::class, 'about'])->name('frontend.about');
+Route::get('/team', [FrontendTemplateController::class, 'team'])->name('frontend.team');
+Route::get('/instructor', [FrontendTemplateController::class, 'instructor'])->name('frontend.instructor');
+Route::get('/shop', [FrontendTemplateController::class, 'shop'])->name('frontend.shop');
+Route::get('/shop_single', [FrontendTemplateController::class, 'shop_single'])->name('frontend.shop_single');
+Route::get('/cart_page', [FrontendTemplateController::class, 'cart_page'])->name('frontend.cart_page');
+Route::get('/search_page', [FrontendTemplateController::class, 'search_page'])->name('frontend.search_page');
+Route::get('/search_none', [FrontendTemplateController::class, 'search_none'])->name('frontend.search_none');
+Route::get('/404', [FrontendTemplateController::class, 'error'])->name('frontend.404');
+Route::get('/contact', [FrontendTemplateController::class, 'contact'])->name('frontend.contact');
+Route::get('/login', [FrontendTemplateController::class, 'login'])->name('frontend.login');
+Route::get('/signup', [FrontendTemplateController::class, 'signup'])->name('frontend.signup');
+Route::get('/team_single', [FrontendTemplateController::class, 'team_single'])->name('frontend.team_single');
+Route::get('/forgetpass', [FrontendTemplateController::class, 'forgetpass'])->name('frontend.forgetpass');
 
 
