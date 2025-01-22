@@ -12,15 +12,15 @@
                 <div class="row align-items-center flex-row-reverse">
                     <div class="col-xxl-5 col-xl-6 col-lg-10 me-auto">
                         <div class="banner-content"> 
-                            <h6 class="subtitle text-uppercase fw-medium">Online education</h6>
-                            <h2 class="title"><span class="d-lg-block">Build Skills With</span> Experts Any Time <span class="d-lg-block">Anywhere</span></h2>
+                            <h6 class="subtitle text-uppercase fw-medium" style="color:#ed3532;">Online education</h6>
+                            <h2 class="title" style="color:#1b2954;"><span class="d-lg-block">Build Skills With</span> Experts Any Time <span class="d-lg-block">Anywhere</span></h2>
                             <p class="desc">Free online courses from the world’s Leading experts. join 18+ million Learners today.</p>
                             <form action="/">
-                                <div class="banner-icon">
+                                <div class="banner-icon">  
                                     <i class="icofont-search"></i>
                                 </div>
                                 <input type="text" placeholder="Keywords of your course">
-                                <button type="submit">Search Course</button>
+                                <button type="submit" style="background-color:#ed3532;">Search Course</button>
                             </form>
                             <div class="banner-catagory d-flex flex-wrap">
                                 <p>Most Popular : </p>
@@ -62,7 +62,7 @@
                                         <img src="assets/images/about/icon/03.jpg" alt="about icon">
                                     </div>
                                     <div class="sr-right">
-                                        <h5>30,000+ Online Courses</h5>
+                                        <h5 >30,000+ Online Courses</h5>
                                         <p>Grow your knowledge and your training and tools.</p>
                                     </div>
                                 </li>
@@ -113,8 +113,8 @@
     <div class="course-section padding-tb">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Featured Courses</span>
-                <h2 class="title">Pick A Course To Get Started</h2>
+                <span class="subtitle" style="color:#ed3532;" >Featured Courses</span>
+                <h2 class="title" style="color:#1b2954;">Pick A Course To Get Started</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row g-4 justify-content-center row-cols-lg-2 row-cols-1">
@@ -386,8 +386,8 @@
     <div class="category-section padding-tb section-bg style-2">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Popular Category</span>
-                <h2 class="title">Popular Category For Learn</h2>
+                <span class="subtitle" style="color:#ed3532;"  >Popular Category</span>
+                <h2 class="title" style="color:#1b2954;"  style="color:#1b2954;">Popular Category For Learn</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
@@ -506,8 +506,8 @@
     <div class="student-feedbak-section padding-tb shape-img">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Loved by 200,000+ students</span>
-                <h2 class="title">Students Community Feedback</h2>
+                <span class="subtitle" style="color:#ed3532;">Loved by 200,000+ students</span>
+                <h2 class="title"  style="color:#1b2954;">Students Community Feedback</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row justify-content-center row-cols-lg-2 row-cols-1">
@@ -585,8 +585,8 @@
     <div class="instructor-section padding-tb section-bg">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">World-class Instructors</span>
-                <h2 class="title">Classes Taught By Real Creators</h2>
+                <span class="subtitle" style="color:#ed3532;" >World-class Instructors</span>
+                <h2 class="title"  style="color:#1b2954;">Classes Taught By Real Creators</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
@@ -781,8 +781,8 @@
     <div class="achievement-section style-2 padding-tb">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">START TO SUCCESS</span>
-                <h2 class="title">Achieve Your Goals With Edukon</h2>
+                <span class="subtitle" style="color:#ed3532;">START TO SUCCESS</span>
+                <h2 class="title" style="color:#1b2954;">Achieve Your Goals With Edukon</h2>
             </div>
             <div class="section-wrapper">
                 <div class="counter-part">
@@ -838,8 +838,8 @@
     <div class="blog-section padding-tb">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">FORM OUR BLOG POSTS</span>
-                <h2 class="title">More Articles From Resource Library</h2>
+                <span class="subtitle" style="color:#ed3532;" >FORM OUR BLOG POSTS</span>
+                <h2 class="title" style="color:#1b2954;">More Articles From Resource Library</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4">
