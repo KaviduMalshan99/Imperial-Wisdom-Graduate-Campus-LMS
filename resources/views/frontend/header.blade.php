@@ -1,5 +1,4 @@
-<!-- header section start here -->
-
+<!-- header section start here --> 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -14,10 +13,9 @@
             padding: 10px 20px;
             font-size: 14px;
             font-weight: bold;
-            border: 1px solidrgb(248, 205, 188); /* Border color */
-            border-radius: 0px; /* Rounded corners */
+            border-radius: 25px; /* Rounded corners */
             color: white; /* Text color */
-            background-color:rgb(254, 108, 18); /* Button background */
+            background-color:rgb(237, 53, 50); /* Button background */
             transition: all 0.3s ease; /* Smooth hover effect */
         }
         .login{
@@ -28,14 +26,15 @@
             font-weight: bold;
             border: 1px solidrgb(248, 205, 188); /* Border color */
             border-radius: 25px; /* Rounded corners */
-            color: rgb(254, 108, 18); /* Text color */
-            background-color: #f9f9f9; /* Button background */
+            color: rgb(237, 53, 50); /* Text color */
+            background-color:rgb(27, 41, 84); /* Button background */
             transition: all 0.3s ease; /* Smooth hover effect */
         }
         .signup {
-            border:rgb(254, 108, 18);;
-            background-color:rgb(254, 108, 18);;
+            border:rgb(254, 108, 18);
+            background-color: rgb(237, 128, 30);;
         }
+        .i:hover,
         .login:hover,
         .signup:hover {
             background-color: transparent; /* Transparent on hover */
@@ -61,7 +60,7 @@
             display: flex; /* Align items in a row */
         }
         .menu ul :hover {
-            color: rgb(254, 108, 18);; /* Change text color on hover */
+            color:rgb(237, 53, 50); /* Change text color on hover */
         }
         .menu ul li {
             position: relative; /* For dropdown positioning */
@@ -75,7 +74,7 @@
             font-weight: bold;
         }
         .menu ul li a:hover {
-            color: rgb(254, 108, 18);; /* Change text color on hover */
+            color: rgb(237, 53, 50); /* Change text color on hover */
         }
         .menu ul li ul {
             position: absolute; /* Position dropdown below parent */
@@ -99,7 +98,7 @@
             color: #000;
         }
         .menu ul li ul li a:hover {
-            background:rgb(23, 20, 90); /* Highlight background on hover */
+            background:rgb(27, 41, 84); /* Highlight background on hover */
             color: #fff; /* Text color on hover */
         }
         .menu-area ul.lab-ul > li > a:hover {
@@ -108,11 +107,11 @@
         }
         .menu ul > a:hover {
             transform: scale(1.2); 
-            color:rgb(200, 81, 30); 
+            color:rgb(237, 53, 50); 
         }
         
         .menu ul li::before {
-            content: ""; /* "+" එක ඉවත් කර ඇත */
+            content: ""; 
         }
 
         .header-bottom .menu-area .menu ul li a::after {
@@ -127,10 +126,53 @@
             transform: translateX(-50%);
         }
 
+        i {
+           color: #f9f9f9 ;
+        }   
+
+        i :hover {
+            transform: scale(1.2); 
+            color:rgb(200, 81, 30); 
+        }
+    .header-top {
+    background-color: rgb(27, 41, 84) ; 
+    color: white; 
+}
+
+.header-top a {
+    color: white; 
+}
+
+.header-top a:hover {
+    color: #FFD700; 
+}
+
+.menu-reduce-btn {
+    text-align: right; /* Aligns the button to the right */
+    margin-top: 10px; /* Adds spacing above the button */
+}
+
+.reduce-btn {
+    background-color: #f00; /* Red background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.reduce-btn:hover {
+    background-color: #c00; /* Darker red on hover */
+}
+
+
+
+
     </style>
 
     <header class="header-section">
-
         <div class="header-top">
             <div class="container">
                 <div class="header-top-area">
@@ -144,13 +186,12 @@
                     </ul>
                     <ul class="lab-ul social-icons d-flex align-items-center">      
                         <li></li>              
-                        <li><a href="#" class="fb"><i class="icofont-facebook-messenger"></i></a></li>
+                        <li><a href="#" class="fb"><i1 class="icofont-facebook-messenger" style= "color: #f9f9f9"></i></a></li>
                         <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
                         <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
                         <li><a href="#" class="skype"><i class="icofont-skype"></i></a></li>
                         <li><a href="#" class="rss"><i class="icofont-rss-feed"></i></a></li>
                     </ul>
-
 
                     <ul class="lab-ul right">
                         <a href="login.html" class="login"><i class="icofont-user"></i> <span>LOG IN</span> </a>
@@ -158,79 +199,51 @@
                     </ul>
 
                 </div>
-
             </div>
         </div>
         <div class="header-bottom">
             <div class="container">
                 <div class="header-wrapper">
                     <div class="logo">
-                        <a href="index.html"><img src="{{asset('assets/images/logo.png')}}" alt="logo"
-                         style="width:250px; height:auto"></a>
+                        <a href="index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="logo"  style="width:250px; height:auto"></a>
                     </div> 
                     <div class="menu-area">
-                        <div class="menu" >
-                            <ul class="lab-ul right">
+                        <div class="menu"  >
+                            <ul class="lab-ul right" >
                                 <li>
                                     <a href="#0">Home</a>
-                                    <ul class="lab-ul">
-                                        <li><a href="{{route('frontend.home')}}" class="active">Home One</a></li>
-                                        <li><a href="{{route('frontend.Home_Two')}}">Home Two</a></li>
-                                        <li><a href="{{route('frontend.Home_Three')}}">Home Three</a></li>
-                                        <li><a href="{{route('frontend.Home_Four')}}">Home Four</a></li>
-                                        <li><a href="{{route('frontend.Home_Five')}}">Home Five</a></li>
-                                        <li><a href="{{route('frontend.Home_Six')}}">Home Six</a></li>
-                                        <li><a href="{{route('frontend.Home_Seven')}}">Home Seven</a></li>
-                                    </ul>
+                                    
                                 </li>
                                 
                                 <li>
-                                    <a href="#0">Courses</a>
-                                    <ul class="lab-ul">
-                                        <li><a href="{{route('frontend.Course')}}">Course</a></li>
-                                        <li><a href="{{route('frontend.Course_Details')}}">Course Details</a></li>
-    
-                                    </ul>
+                                    <a href="#0">About</a>
+                                    
                                 </li>
                                 <li>
                                     <a href="#0">Blog</a>
-                                    <ul class="lab-ul">
-                                        <li><a href="{{route('frontend.blog')}}">Blog Grid</a></li>
-                                        <li><a href="{{route('frontend.blog_style2')}}">Blog Style 2</a></li>
-                                        <li><a href="{{route('frontend.blog_style3')}}">Blog Style 3</a></li>
-                                        <li><a href="{{route('frontend.blog_single')}}">Blog Single</a></li>
-                                    </ul>
+                                    
                                 </li>
                                 <li>
-                                    <a href="#0">Pages</a>
-                                    <ul class="lab-ul">
-                                        <li><a href="{{route('frontend.about')}}">About</a></li>
-                                        <li><a href="{{route('frontend.team')}}">Team</a></li>
-                                        <li><a href="{{route('frontend.instructor')}}">Instructor</a></li>
-                                        <li>
-                                            <a href="#0">Shop Pages</a>
-                                            <ul class="lab-ul">
-                                                <li><a href="{{route('frontend.shop')}}">Shop Page</a></li>
-                                                <li><a href="{{route('frontend.shop_single')}}">Shop Details Page</a></li>
-                                                <li><a href="{{route('frontend.cart_page')}}">Shop Cart Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="{{route('frontend.search_page')}}">Search Page</a></li>
-                                        <li><a href="{{route('frontend.search_none')}}">Search None</a></li>
-                                        <li><a href="{{route('frontend.404')}}">404</a></li>
-                                    </ul>
+                                    <a href="#0">Study Abord</a>
+                                    
                                 </li>
-                                <li><a href="{{route('frontend.contact')}}">Contact</a></li>
+                                <li><a href="#0">Pay Online</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="" >International Student</a></li>
+                                        <li><a href="" >Local Student</a></li>
+                                   </ul>
+
+                                </li>        
+                                    
+
+                                <li><a href="#0">Blogs</a></li>
+                                   
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
 
-                        
-                        <a href="{{route('frontend.login')}}" class="login"><i class="icofont-user"></i> <span>LOG IN</span> </a>
-                        <a href="{{route('frontend.signup')}}" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span> </a>
-
-
-                         toggle icons -->
-                       <!-- <div class="header-bar d-lg-none">
+                        <!-- toggle icons -->
+                        <div class="header-bar d-lg-none">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -243,165 +256,6 @@
             </div>
         </div>
     </header>
-     header section ending here -->
-<!-- header section start here -->
-
-
-<!-- header section start here -->
-<header class="header-section">
-    <style>
-        
-        .menu ul li ul li a:hover{
-            background:rgb(23,20,90);
-            color:#fff;
-        }
-        .menu-area ul.lab-ul>li>a:hover{
-            transform:scale(1.2);
-            color:#f9f9f9;
-        }
-        .header-bottom .menu-area .menu ul li a {
-            color:rgb(0, 0, 0); 
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s ease-in-out;
-            position: relative;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-
-             
-        }
-
-        .header-bottom .menu-area .menu ul li ul li a:hover {
-            color:rgb(255, 255, 255); 
-        }
-
-        .header-bottom .menu-area .menu ul li a::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -5px;
-            width: 0%;
-            height: 2px;
-            background-color: #ffcc00; 
-            transition: all 0.3s ease-in-out;
-            transform: translateX(-50%);
-        }
-
-        .header-bottom .menu-area .menu ul li a:hover::after {
-            width: 100%;
-            background-color:rgb(255, 145, 0);
-            
-
-        }
-
-        .header-bottom .menu-area .menu ul li a.active {
-            color:rgb(255, 255, 255);
-            font-weight: bold;
-        }
-
-    </style>
-
-    <div class="header-top">
-        <div class="container">
-            <div class="header-top-area">
-                <ul class="lab-ul left">
-                    <li>
-                        <i class="icofont-ui-call"></i> <span>+800-123-4567 6587</span>
-                    </li>
-                    <li>
-                        <i class="icofont-location-pin"></i> Beverley, New York 224 USA
-                    </li>
-                </ul>
-                <ul class="lab-ul social-icons d-flex align-items-center">
-                    <li><p>Find us on : </p></li>
-                    <li><a href="#" class="fb"><i class="icofont-facebook-messenger"></i></a></li>
-                    <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
-                    <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
-                    <li><a href="#" class="skype"><i class="icofont-skype"></i></a></li>
-                    <li><a href="#" class="rss"><i class="icofont-rss-feed"></i></a></li>
-                </ul>
-            </div> 
-        </div>
-    </div>
-    <div class="header-bottom">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <a href="index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="logo"
-                    style="width:250px; height:auto"></a>
-                </div> 
-                <div class="menu-area">
-                    <div class="menu">
-                        <ul class="lab-ul">
-                            <li>
-                                <a href="#0">Home</a>
-                                <ul class="lab-ul">
-                                    <li><a href="{{ route('frontend.home') }}">Home One</a></li>
-                                    <li><a href="{{ route('frontend.Home_Two') }}">Home Two</a></li>
-                                    <li><a href="{{ route('frontend.Home_Three') }}">Home Three</a></li>
-                                    <li><a href="{{ route('frontend.Home_Four') }}">Home Four</a></li>
-                                    <li><a href="{{ route('frontend.Home_Five') }}">Home Five</a></li>
-                                    <li><a href="{{ route('frontend.Home_Six') }}">Home Six</a></li>
-                                    <li><a href="{{ route('frontend.Home_Seven') }}">Home Seven</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Courses</a>
-                                <ul class="lab-ul">
-                                    <li><a href="{{ route('frontend.Course') }}">Course</a></li>
-                                    <li><a href="{{ route('frontend.Course_Details') }}">Course Details</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                            <li class="{{ Request::is('blog*') ? 'active' : '' }}">
-                                <a href="#0" class="curved">Blog</a>
-                                <ul class="lab-ul">
-                                    <li class="{{ Request::is('blog*') ? 'active' : '' }}"><a href="{{ route('frontend.blog') }}"  class="curved">Blog Grid</a></li>
-                                    <li><a href="{{ route('frontend.blog_style2') }}">Blog Style 2</a></li>
-                                    <li><a href="{{ route('frontend.blog_style3') }}">Blog Style 3</a></li>
-                                    <li><a href="{{ route('frontend.blog_single') }}">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Pages</a>
-                                <ul class="lab-ul">
-                                    <li><a href="{{ route('frontend.about') }}">About</a></li>
-                                    <li><a href="{{ route('frontend.team') }}">Team</a></li>
-                                    <li><a href="{{ route('frontend.instructor') }}">Instructor</a></li>
-                                    <li>
-                                        <a href="#0">Shop Pages</a>
-                                        <ul class="lab-ul">
-                                            <li><a href="{{ route('frontend.shop') }}">Shop Page</a></li>
-                                            <li><a href="{{ route('frontend.shop_single') }}">Shop Details Page</a></li>
-                                            <li><a href="{{ route('frontend.cart_page') }}">Shop Cart Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="{{ route('frontend.search_page') }}">Search Page</a></li>
-                                    <li><a href="{{ route('frontend.search_none') }}">Search None</a></li>
-                                    <li><a href="{{ route('frontend.404') }}">404</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
-                        </ul>
-                    </div>
-                    <a href="{{ route('frontend.login') }}" class="login"><i class="icofont-user"></i> <span>LOG IN</span></a>
-                    <a href="{{ route('frontend.signup') }}" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span></a>
-
-                    <!-- toggle icons -->
-                    <div class="header-bar d-lg-none">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="ellepsis-bar d-lg-none">
-                        <i class="icofont-info-square"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- header section ending here -->
+    <!-- header section ending here -->
 
 
