@@ -437,4 +437,7 @@ Route::get('/frontend/international-stu', function (){
 Route::get('/frontend/blog', function (){
     return view('frontend.blog');
 })->name('frontend.blog');
+Route::get('/frontend/contact', function (){
+    return view('frontend.contact');
+})->name('frontend.contact');
 
