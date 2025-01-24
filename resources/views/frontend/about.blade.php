@@ -4,573 +4,230 @@
 
 @section('content')
 
-    <!-- Pageheader section start here -->
-    <div class="pageheader-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="pageheader-content text-center">
-                        <h2>About Our Edukon</h2>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">About</li>
-                            </ol>
-                        </nav>
-                    </div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
+.pageheader-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.pageheader-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('{{ asset('assets/images/international-cover1.jpeg') }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.pageheader-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 150px;
+    color: white;
+    text-align: center;
+}
+
+.breadcrumb-item a {
+    color: white;
+}
+
+.pageheader-content h2 {
+    color: rgb(255, 252, 251); /* Replace this with your desired color code */
+    font-weight: bold; /* Optional: To make the text bold */
+}
+
+.vis-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color:rgb(27, 41, 84);;
+    padding: 50px;
+    color: white;
+    margin-top: 50px; /* Add spacing between sections */
+    padding: 20px 10px;
+}
+
+.vis-content-box {
+    width: 40%;
+}
+
+.vis-content-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vis-content-box h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: rgb(254, 108, 18);;
+    margin-top: 5px;
+}
+
+.vis-content-box p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.vis-content-box .quote {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+</style>
+
+<!-- Pageheader section start here -->
+<div class="pageheader-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="pageheader-content text-center">
+                    <h2>About Us</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Pageheader section ending here -->
+</div>
+<!-- Pageheader section ending here -->
 
-    <!-- About Us Section Start Here -->
-    <div class="about-section style-3 padding-tb section-bg">
-        <div class="container">
-            <div class="row justify-content-center row-cols-xl-2 row-cols-1 align-items-center">
-                <div class="col">
-                    <div class="about-left">
-                        <div class="about-thumb">
-                            <img src="assets/images/about/01.jpg" alt="about">
-                        </div>
-                        <div class="abs-thumb">
-                            <img src="assets/images/about/02.jpg" alt="about">
-                        </div>
-                        <div class="about-left-content">
-                            <h3>30+</h3>
-                            <p>Years Of Experiences</p>
-                        </div>
+<!-- About Us Section Start Here -->
+<div class="about-section style-3 padding-tb section-bg">
+    <div class="container">
+        <div class="row justify-content-center row-cols-xl-2 row-cols-1 align-items-center">
+            <div class="col">
+                <div class="about-left">
+                    <div class="about-thumb">
+                        <img src="assets/images/about.jpeg" alt="about">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="about-right">
-                        <div class="section-header">
-                            <span class="subtitle">About Our Edukon</span>
-                            <h2 class="title">Good Qualification Services And Better Skills</h2>
-                            <p>Distinctively provide acces mutfuncto users whereas transparent proceses somes ncentivize eficient functionalities rather than extensible archtectur communicate leveraged services and cross-platform.</p>
-                        </div>
-                        <div class="section-wrapper">
-                            <ul class="lab-ul">
-                                <li>
-                                    <div class="sr-left">
-                                        <img src="assets/images/about/icon/01.jpg" alt="about icon">
-                                    </div>
-                                    <div class="sr-right">
-                                        <h5>Skilled Instructors</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sr-left">
-                                        <img src="assets/images/about/icon/02.jpg" alt="about icon">
-                                    </div>
-                                    <div class="sr-right">
-                                        <h5>Get Certificate</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sr-left">
-                                        <img src="assets/images/about/icon/03.jpg" alt="about icon">
-                                    </div>
-                                    <div class="sr-right">
-                                        <h5>Online Classes</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="abs-thumb">
+                        <img src="assets/images/about.jpeg" alt="about">
+                    </div>
+                    <div class="about-left-content">
+                        <h3>30+</h3>
+                        <p>Years Of Experiences</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- About Us Section Ending Here -->
-
-    <!-- student feedbak section start here -->
-    <div class="student-feedbak-section padding-tb shape-img">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle">Loved by 200,000+ students</span>
-                <h2 class="title">Students Community Feedback</h2>
-            </div>
-            <div class="section-wrapper">
-                <div class="row justify-content-center row-cols-lg-2 row-cols-1">
-                    <div class="col">
-                        <div class="sf-left">
-                            <div class="sfl-thumb">
-                                <img src="assets/images/feedback/01.jpg" alt="student feedback">
-                                <a href="https://www.youtube-nocookie.com/embed/jP649ZHA8Tg" class="video-button " data-rel="lightcase"><i class="icofont-ui-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="stu-feed-item">
-                            <div class="stu-feed-inner">
-                                <div class="stu-feed-top">
-                                    <div class="sft-left">
-                                        <div class="sftl-thumb">
-                                            <img src="assets/images/feedback/student/01.jpg" alt="student feedback">
-                                        </div>
-                                        <div class="sftl-content">
-                                            <a href="#"><h6>Oliver Beddows</h6></a>
-                                            <span>UX designer</span>
-                                        </div>
-                                    </div>
-                                    <div class="sft-right">
-                                        <span class="ratting">
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="stu-feed-bottom">
-                                    <p>Rapidiously buildcollaboration anden deas sharing viaing and with bleedng edgeing nterfaces fnergstcally plagiarize teams anbuling paradgms whereas goingi forward process and monetze</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stu-feed-item">
-                            <div class="stu-feed-inner">
-                                <div class="stu-feed-top">
-                                    <div class="sft-left">
-                                        <div class="sftl-thumb">
-                                            <img src="assets/images/feedback/student/02.jpg" alt="student feedback">
-                                        </div>
-                                        <div class="sftl-content">
-                                            <a href="#"><h6>Madley Pondor</h6></a>
-                                            <span>UX designer</span>
-                                        </div>
-                                    </div>
-                                    <div class="sft-right">
-                                        <span class="ratting">
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="stu-feed-bottom">
-                                    <p>Rapidiously buildcollaboration anden deas sharing viaing and with bleedng edgeing nterfaces fnergstcally plagiarize teams anbuling paradgms whereas goingi forward process and monetze</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- student feedbak section ending here -->
-
-    <!-- Instructors Section Start Here -->
-    <div class="instructor-section padding-tb section-bg">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle">World-class Instructors</span>
-                <h2 class="title">Classes Taught By Real Creators</h2>
-            </div>
-            <div class="section-wrapper">
-                <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-                    <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/01.jpg" alt="instructor">
-                                </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Emilee Logan</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/02.jpg" alt="instructor">
-                                </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Donald Logan</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/03.jpg" alt="instructor">
-                                </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Oliver Porter</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/04.jpg" alt="instructor">
-                                </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Nahla Jones</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center footer-btn">
-                    <p>Want to help people learn, grow and achieve more in life?<a href="team.html">Become an instructor</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Instructors Section Ending Here -->
-
-    <!-- Skill section start here -->
-    <div class="skill-section padding-tb">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5 col-12">
+            <div class="col">
+                <div class="about-right">
                     <div class="section-header">
-                        <h2 class="title">Build Your Project Management Skills Online Anytime</h2>
-                        <a href="#" class="lab-btn"><span>Sign Up Now</span></a>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-12">
-                    <div class="section-wrpper">
-                        <div class="row g-4 justify-content-center row-cols-sm-2 row-cols-1">
-                            <div class="col">
-                                <div class="skill-item">
-                                    <div class="skill-inner">
-                                        <div class="skill-thumb">
-                                            <img src="assets/images/skill/icon/01.jpg" alt="skill thumb">
-                                        </div>
-                                        <div class="skill-content">
-                                            <h5>Skilled Instructors</h5>
-                                            <p>You pick the schedule.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="skill-item">
-                                    <div class="skill-inner">
-                                        <div class="skill-thumb">
-                                            <img src="assets/images/skill/icon/02.jpg" alt="skill thumb">
-                                        </div>
-                                        <div class="skill-content">
-                                            <h5>Get Certificate</h5>
-                                            <p>You pick the schedule.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="skill-item">
-                                    <div class="skill-inner">
-                                        <div class="skill-thumb">
-                                            <img src="assets/images/skill/icon/03.jpg" alt="skill thumb">
-                                        </div>
-                                        <div class="skill-content">
-                                            <h5>Online Classes</h5>
-                                            <p>You pick the schedule.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="skill-item">
-                                    <div class="skill-inner">
-                                        <div class="skill-thumb">
-                                            <img src="assets/images/skill/icon/04.jpg" alt="skill thumb">
-                                        </div>
-                                        <div class="skill-content">
-                                            <h5>Educator Helps</h5>
-                                            <p>You pick the schedule.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="subtitle">
+                            <span class="subtitle" style="color: rgb(254, 108, 18);">About IW</span>
                         </div>
+                        <h2 class="title">Good Qualification Services And Better Skills</h2>
+                        <p>We are a body of professionals specialising in the fields of Management, Marketing, Finance, Human Resources, Education, and Visa guidance. Having worked for decades in industries relevant to our fields, we have now collaborated in order to provide you with the best solution for your business & educational needs. In order to remain a forerunner among competitors, it is our belief that continuous transformation, creativity, and innovation provide a competitive edge within the industry.</p>
+                    </div>
+                    <div class="section-wrapper">
+                        <ul class="lab-ul">
+                            <li>
+                                <div class="sr-left">
+                                    <i class="fas fa-chalkboard-teacher fa-3x" style="color: rgb(254, 108, 18);"></i>
+                                </div>
+                                <div class="sr-right">
+                                    <h5>Skilled Instructors</h5>
+                                    <p>We provide access to skilled instructors who are ready to share their expertise.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sr-left">
+                                    <i class="fas fa-certificate fa-3x" style="color: rgb(254, 108, 18);"></i>
+                                </div>
+                                <div class="sr-right">
+                                    <h5>Get Certificate</h5>
+                                    <p>Earn certificates to showcase your achievements and skills effectively.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sr-left">
+                                    <i class="fas fa-laptop fa-3x" style="color: rgb(254, 108, 18);"></i>
+                                </div>
+                                <div class="sr-right">
+                                    <h5>Online Classes</h5>
+                                    <p>Access engaging and interactive online classes from anywhere in the world.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Skill section ending here -->
+</div>
+<!-- About Us Section Ending Here -->
 
-
-    <!-- Achievement section start here -->
-    <div class="achievement-section style-2 padding-tb">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle">START TO SUCCESS</span>
-                <h2 class="title">Achieve Your Goals With Edukon</h2>
-            </div>
-            <div class="section-wrapper">
-                <div class="counter-part">
-                    <div class="row g-4 row-cols-lg-4 row-cols-sm-2 row-cols-1 justify-content-center">
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="30" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Years of Language Education Experience</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="3080" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Learners Enrolled in Edukon Courses</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="330" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Qualified Teachers And Language Experts</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="2300" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Innovative Foreign Language Courses</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Vision and Mission Section Start Here -->
+<div class="vis-container" style = "margin-left: 90px; margin-right: 90px;">
+    <div class="vis-content-box" style="color: white;">
+        <h2 style="color: white;">Our Vision</h2>
+        <span class="quote">“</span>
+        <p style="color:white">
+            We aspire to cultivate a dynamic learning environment that nurtures creativity, critical thinking, and entrepreneurial mindset to our graduates and aim to inspire our students to become catalysts for change, instilling in them a deep understanding of ethical business practices and social responsibility.
+        </p>
     </div>
-    <!-- Achievement section ending here -->
-
-    <!-- blog section start here -->
-    <div class="blog-section padding-tb">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle">FORM OUR BLOG POSTS</span>
-                <h2 class="title">More Articles From Resource Library</h2>
-            </div>
-            <div class="section-wrapper">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4">
-                    <div class="col">
-                        <div class="post-item">
-                            <div class="post-inner">
-                                <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="assets/images/blog/01.jpg" alt="blog thumb"></a>
-                                </div>
-                                <div class="post-content">
-                                    <a href="blog-single.html"><h4>Scottish Creatives To Receive Funded Business.</h4></a>
-                                    <div class="meta-post">
-                                        <ul class="lab-ul">
-                                            <li><i class="icofont-ui-user"></i>Begrass Tyson</li>
-                                            <li><i class="icofont-calendar"></i>April 23,2021</li>
-                                        </ul>
-                                    </div>
-                                    <p>Pluoresnts customize prancing apcente customer service anding ands asing in straelg Interacvely cordinate performe</p>
-                                </div>
-                                <div class="post-footer">
-                                    <div class="pf-left">
-                                        <a href="blog-single.html" class="lab-btn-text">Read more <i class="icofont-external-link"></i></a>
-                                    </div>
-                                    <div class="pf-right">
-                                        <i class="icofont-comment"></i>
-                                        <span class="comment-count">3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="post-item">
-                            <div class="post-inner">
-                                <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="assets/images/blog/02.jpg" alt="blog thumb"></a>
-                                </div>
-                                <div class="post-content">
-                                    <a href="blog-single.html"><h4>Scottish Creatives To Receive Funded Business.</h4></a>
-                                    <div class="meta-post">
-                                        <ul class="lab-ul">
-                                            <li><i class="icofont-ui-user"></i>Begrass Tyson</li>
-                                            <li><i class="icofont-calendar"></i>April 23,2021</li>
-                                        </ul>
-                                    </div>
-                                    <p>Pluoresnts customize prancing apcente customer service anding ands asing in straelg Interacvely cordinate performe</p>
-                                </div>
-                                <div class="post-footer">
-                                    <div class="pf-left">
-                                        <a href="blog-single.html" class="lab-btn-text">Read more <i class="icofont-external-link"></i></a>
-                                    </div>
-                                    <div class="pf-right">
-                                        <i class="icofont-comment"></i>
-                                        <span class="comment-count">3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="post-item">
-                            <div class="post-inner">
-                                <div class="post-thumb">
-                                    <a href="blog-single.html"><img src="assets/images/blog/03.jpg" alt="blog thumb"></a>
-                                </div>
-                                <div class="post-content">
-                                    <a href="blog-single.html"><h4>Scottish Creatives To Receive Funded Business.</h4></a>
-                                    <div class="meta-post">
-                                        <ul class="lab-ul">
-                                            <li><i class="icofont-ui-user"></i>Begrass Tyson</li>
-                                            <li><i class="icofont-calendar"></i>April 23,2021</li>
-                                        </ul>
-                                    </div>
-                                    <p>Pluoresnts customize prancing apcente customer service anding ands asing in straelg Interacvely cordinate performe</p>
-                                </div>
-                                <div class="post-footer">
-                                    <div class="pf-left">
-                                        <a href="blog-single.html" class="lab-btn-text">Read more <i class="icofont-external-link"></i></a>
-                                    </div>
-                                    <div class="pf-right">
-                                        <i class="icofont-comment"></i>
-                                        <span class="comment-count">3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="vis-content-box" style="color: white;">
+        <h2 style="color: white;">Our Mission</h2>
+        <span class="quote">“</span>
+        <p style="color:white">
+            Our mission at Imperial College of Business Studies is to empower individuals with knowledge, skills, positive attitude and values that drive business excellence and societal impact. We are dedicated to delivering world-class education, coupled with cutting-edge learning tools, and aim to foster a vibrant community of diverse and innovative thinkers who will become successful business leaders.
+        </p>
     </div>
-    <!-- blog section ending here -->
+</div>
+<!-- Vision and Mission Section Ending Here -->
 
-    <!-- sponsor section start here -->
-    <div class="sponsor-section section-bg">
-        <div class="container">
-            <div class="section-wrapper">
-                <div class="sponsor-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/01.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/02.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/03.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/04.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/05.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/06.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- sponsor section ending here -->
+<!-- Message From The Dean Section Start Here -->
+<div style="display: flex; align-items: center; padding: 90px;">
+  <div style="flex: 1; padding-right: 90px;">
+    <h2 class="title">Message From The Dean</h2>
+    <br>
+    <br>
+    <p style="font-size: 16px; line-height: 1.8; text-align: justify;">
+      At Imperial College, we prioritize your professional growth and strive to unlock your full career potential. Our carefully designed curriculum and course modules cater to the needs of professionals like you, equipping you with high-caliber skills to tackle the challenges of the contemporary business world. We provide a conducive and comfortable environment for teaching and learning, ensuring an enriching experience throughout your journey. Our dedicated academic staff will guide you step-by-step towards the successful completion of your Master's degree program.
+    </p>
+    <p style="font-size: 16px; line-height: 1.8; text-align: justify;">
+      I take immense pride in sharing that our graduates, both in Sri Lanka and overseas, have excelled in their respective professions. As the Dean, warmly welcome you and congratulate you on considering our programs for your higher education journey. Your decision to join us has the power to bring about a transformative and lasting impact on your life!
+    </p>
+    <p style="font-size: 18px; font-weight: bold; margin-top: 20px;">Dr. Ganeshamoorthy<br>Ph.D</p>
+  </div>
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img src="assets/images/dean-icbs.png" alt="Dean's Image" style="border-radius: 10px; max-width: 100%; height: auto;">
+  </div>
+</div>
+<!-- Message From The Dean Section End Here -->
 
-    @endsection
+<!-- Our Partners Section Start Here-->
+<div class="partners-section" style="padding: 50px 20px; background-color: #f9f9f9; text-align: center;">
+  <h1 style="font-size: 2rem; position: relative; display: inline-block; margin-bottom: 20px;">
+    Our Partners
+    <span style="display: block; width: 50px; height: 3px; background-color: rgb(254, 108, 18); margin: 10px auto 0 auto;"></span>
+  </h1>
+  <div class="logos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+    <img src="{{ asset('assets/images/logo-uws.png') }}" alt="University of the West of Scotland" style="max-width: 150px; max-height: 100px; object-fit: contain;">
+    <img src="{{ asset('assets/images/qmu-logo.png') }}" alt="Queen Margaret University" style="max-width: 150px; max-height: 100px; object-fit: contain;">
+    <img src="{{ asset('assets/images/southern-cross-logo.png') }}" alt="Southern Cross University" style="max-width: 150px; max-height: 100px; object-fit: contain;">
+    <img src="{{ asset('assets/images/sqa-logo.png') }}" alt="SQA" style="max-width: 150px; max-height: 100px; object-fit: contain;">
+    <img src="{{ asset('assets/images/aicpa-logo.jpg') }}" alt="AICPA & CIMA" style="max-width: 150px; max-height: 100px; object-fit: contain;">
+    <img src="{{ asset('assets/images/cima-logo.jpg') }}" alt="CIMA" style="max-width: 150px; max-height: 100px; object-fit: contain;">
+    <img src="{{ asset('assets/images/aat-logo.png') }}" alt="AAT" style="max-width: 150px; max-height: 100px; object-fit: contain;">
+  </div>
+</div>
+<!-- Our Partners Section End Here-->
+@endsection
