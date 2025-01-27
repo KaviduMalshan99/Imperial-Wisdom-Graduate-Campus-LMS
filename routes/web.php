@@ -428,6 +428,7 @@ Route::get('/login', [FrontendTemplateController::class, 'login'])->name('fronte
 Route::get('/signup', [FrontendTemplateController::class, 'signup'])->name('frontend.signup');
 Route::get('/team_single', [FrontendTemplateController::class, 'team_single'])->name('frontend.team_single');
 Route::get('/forgetpass', [FrontendTemplateController::class, 'forgetpass'])->name('frontend.forgetpass');
+Route::get('/study', [FrontendTemplateController::class, 'study'])->name('frontend.study');
 
 
 
