@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LectureController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
@@ -36,7 +37,7 @@ Route::get('lang/{locale}', function ($locale) {
 })->name('lang');
 
 Route::prefix('dashboard')->group(function () {
-    Route::view('index', 'dashboard.index')->name('index');
+    // Route::view('index', 'dashboard.index')->name('index');
     Route::view('dashboard-02', 'dashboard.dashboard-02')->name('dashboard-02');
     Route::view('dashboard-03', 'dashboard.dashboard-03')->name('dashboard-03');
     Route::view('dashboard-04', 'dashboard.dashboard-04')->name('dashboard-04');
@@ -261,13 +262,15 @@ Route::prefix('others')->group(function () {
 });
 
 Route::prefix('authentication')->group(function () {
-    Route::view('login', 'authentication.login')->name('login');
+    Route::get('login', [AuthController::class, 'showLoginForm'])->name('login.form');
+    Route::post('login', [AuthController::class, 'login'])->name('login');
     Route::view('login-one', 'authentication.login-one')->name('login-one');
     Route::view('login-two', 'authentication.login-two')->name('login-two');
     Route::view('login-bs-validation', 'authentication.login-bs-validation')->name('login-bs-validation');
     Route::view('login-bs-tt-validation', 'authentication.login-bs-tt-validation')->name('login-bs-tt-validation');
     Route::view('login-sa-validation', 'authentication.login-sa-validation')->name('login-sa-validation');
-    Route::view('sign-up', 'authentication.sign-up')->name('sign-up');
+    Route::get('register', [AuthController::class, 'showRegisterForm'])->name('register.form');
+    Route::post('register', [AuthController::class, 'signup'])->name('register.store');
     Route::view('sign-up-one', 'authentication.sign-up-one')->name('sign-up-one');
     Route::view('sign-up-two', 'authentication.sign-up-two')->name('sign-up-two');
     Route::view('sign-up-wizard', 'authentication.sign-up-wizard')->name('sign-up-wizard');
@@ -275,7 +278,13 @@ Route::prefix('authentication')->group(function () {
     Route::view('forget-password', 'authentication.forget-password')->name('forget-password');
     Route::view('reset-password', 'authentication.reset-password')->name('reset-password');
     Route::view('maintenance', 'authentication.maintenance')->name('maintenance');
+
+
 });
+Route::middleware('auth:admin')->group(function () {
+    Route::get('dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
+});
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::view('comingsoon', 'comingsoon.comingsoon')->name('comingsoon');
 Route::view('comingsoon-bg-video', 'comingsoon.comingsoon-bg-video')->name('comingsoon-bg-video');
@@ -373,11 +382,11 @@ Route::get('/clear-cache', function () {
 Route::prefix('teacherDashbord')->group(function () {
     //Route::view('dashboard-02', 'dashboard.dashboard-02')->name('dashboard-02');
     Route::get('dashboard-02', [CourseController::class, 'index'])->name('dashboard-02');
-    Route::view('contactsTeach', 'TeacherDashboard.Contact.contacts')->name('contactsTeach');
-    Route::view('teach-social-app', 'TeacherDashboard.SocialApp.social-app')->name('teach-social-app');
-    Route::view('teach-calendar', 'TeacherDashboard.Calender.calendar-basic')->name('teach-calendar');
-    Route::view('teach-to-do', 'TeacherDashboard.Todo.to-do')->name('teach-to-do');
-    Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement');
+    // Route::view('contactsTeach', 'TeacherDashboard.Contact.contacts')->name('contactsTeach');
+    // Route::view('teach-social-app', 'TeacherDashboard.SocialApp.social-app')->name('teach-social-app');
+    // Route::view('teach-calendar', 'TeacherDashboard.Calender.calendar-basic')->name('teach-calendar');
+    // Route::view('teach-to-do', 'TeacherDashboard.Todo.to-do')->name('teach-to-do');
+    // Route::view('teach-announcement', 'TeacherDashboard.Anouncement.base-input')->name('teach-announcement');
 
 });
 

@@ -12,7 +12,7 @@
       </div>
     </form>
     <div class="header-logo-wrapper col-auto p-0">
-      <div class="logo-wrapper"><a href="{{ route('index')}}"><img class="img-fluid" src="{{ asset('assets/images/logo/logo.png') }}" alt=""></a></div>
+      <div class="logo-wrapper"><a href="{{ route('admin.dashboard') }}"><img class="img-fluid" src="{{ asset('assets/images/logo/logo.png') }}" alt=""></a></div>
       <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i></div>
     </div>
     <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
@@ -173,8 +173,16 @@
         </li>
         <li class="profile-nav onhover-dropdown pe-0 py-0">
           <div class="media profile-media"><img class="b-r-10" src="{{ asset('assets/images/dashboard/profile.png') }}" alt="">
-            <div class="media-body"><span>Emay Walter</span>
-              <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
+            <div class="media-body">
+                @if(Auth::check())
+                    <span>{{ Auth::user()->name }}</span>
+                    <p class="mb-0 font-roboto">
+                        Admin
+                        <i class="middle fa fa-angle-down"></i>
+                    </p>
+                @else
+                    <span>Guest</span>
+                @endif
             </div>
           </div>
           <ul class="profile-dropdown onhover-show-div">
@@ -182,13 +190,22 @@
             <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
             <li><a href="#"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
             <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
-            <li><a href="#"><i data-feather="log-in"> </i><span>Log in</span></a></li>
+            <li>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" style="background: none; border: none; color: inherit; padding: 0; cursor: pointer;">
+                        <i data-feather="log-in"></i>
+                        <span>Log out</span>
+                    </button>
+                </form>
+
+            </li>
           </ul>
         </li>
       </ul>
     </div>
     <script class="result-template" type="text/x-handlebars-template">
-      <div class="ProfileCard u-cf">                        
+      <div class="ProfileCard u-cf">
       <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
       <div class="ProfileCard-details">
       {{-- <div class="ProfileCard-realName">{{name}}</div> --}}

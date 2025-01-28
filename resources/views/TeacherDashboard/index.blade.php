@@ -1,6 +1,3 @@
-
-@include('TeacherDashboard.layout.sidebar')
-
 @extends('TeacherDashboard.layout.sidebar')
 @section('title', 'Ecommerce')
 

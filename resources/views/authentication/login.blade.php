@@ -13,18 +13,27 @@
       <div class="col-12 p-0">
          <div class="login-card">
             <div>
-               <div><a class="logo" href="{{ route('index') }}"><img class="img-fluid for-light" src="{{asset('assets/images/logo/login.png')}}" alt="looginpage"><img class="img-fluid for-dark" src="{{asset('assets/images/logo/logo_dark.png')}}" alt="looginpage"></a></div>
+               <div><a class="logo" href="{{ route('admin.dashboard') }}"><img class="img-fluid for-light" src="{{asset('assets/images/logo/login.png')}}" alt="looginpage"><img class="img-fluid for-dark" src="{{asset('assets/images/logo/logo_dark.png')}}" alt="looginpage"></a></div>
                <div class="login-main">
-                  <form class="theme-form">
+                  <form action="{{ route('login') }}" method="POST" class="theme-form">
+                    @csrf
                      <h4>Sign in to account</h4>
                      <p>Enter your email & password to login</p>
+
+                            @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+
                      <div class="form-group">
                         <label class="col-form-label">Email Address</label>
-                        <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+                        <input class="form-control" type="email" name="email" placeholder="Test@gmail.com" required>
                      </div>
                      <div class="form-group">
                         <label class="col-form-label">Password</label>
-                        <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+                        <input class="form-control" type="password" name="password" placeholder="*********" required>
                         <div class="show-hide"><span class="show">                         </span></div>
                      </div>
                      <div class="form-group mb-0">
@@ -39,7 +48,7 @@
                      <div class="social mt-4">
                         <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a></div>
                      </div>
-                     <p class="mt-4 mb-0">Don't have account?<a class="ms-2" href="{{  route('sign-up') }}">Create Account</a></p>
+                     <p class="mt-4 mb-0">Don't have account?<a class="ms-2" href="{{  route('register.form') }}">Create Account</a></p>
                   </form>
                </div>
             </div>
