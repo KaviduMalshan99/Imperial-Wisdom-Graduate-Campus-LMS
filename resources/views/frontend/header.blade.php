@@ -216,11 +216,7 @@
                                 </li>
                                 
                                 <li>
-                                    <a href="#0">About</a>
-                                    
-                                </li>
-                                <li>
-                                    <a href="#0">Blog</a>
+                                    <a href="">About</a>
                                     
                                 </li>
                                 <li>
@@ -229,16 +225,16 @@
                                 </li>
                                 <li><a href="#0">Pay Online</a>
                                     <ul class="lab-ul">
-                                        <li><a href="" >International Student</a></li>
+                                        <li><a href="">International Student</a></li>
                                         <li><a href="" >Local Student</a></li>
                                    </ul>
 
                                 </li>        
                                     
 
-                                <li><a href="#0">Blogs</a></li>
+                                <li><a href="">Blogs</a></li>
                                    
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="">Contact</a></li>
                             </ul>
                         </div>
 
