@@ -1,108 +1,28 @@
+
 @extends('frontend.master')
 
 @section('title', 'Home - Edukon')
 
 @section('content')
-<style>
-/* Enroll Section */
-.enroll-section {
-    position: fixed; /* Keeps the button fixed */
-    top: 50%; /* Center vertically */
-    right: 20px; /* Align to the right */
-    transform: translateY(-50%); /* Perfect vertical alignment */
-    display: flex; /* Flexbox to align */
-    flex-direction: column; /* Vertical alignment */
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    z-index: 1000; /* Keep on top of other content */
-}
-
-/* Enroll Button */
-.enroll-btn {
-    background-color:rgb(12, 102, 199); /* Button color (blue) */
-    color:rgb(255, 255, 255); /* Text color */
-    font-size: 14px; /* Font size */
-    font-weight: bold; /* Bold text */
-    padding: 6px 15px; /* Space inside the button */
-    border-radius: 20px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
-    transition: all 0.3s ease; /* Smooth hover animation */
-    writing-mode: vertical-rl; /* Rotate the text vertically */
-    text-orientation: upright; /* Ensure letters stay upright */
-}
-
-/* Hover Effect for Button */
-.enroll-btn:hover {
-    background-color:rgb(21, 133, 252); /* Darker blue on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-.h6 {
-    position: relative;
-    animation: fall 2s ease-in-out;
-}
-@keyframes fall{
-    0%{
-        transform: translatey(-100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0);
-        opacity: 1;
-    }
-}
-.h2{
-    animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
-}
-@keyframes typing{
-    from{
-        width: 0;
-    }
-    to{
-        width: 100%;
-     }
-}
-@keyframes blink-caret{
-    from,to{
-        border-color: transparent;
-    }
-    50%{
-        border-color: black;
-    }
-}
-/* Responsive Design */
-@media (max-width: 768px) {
-    .enroll-section {
-        right: 10px; /* Adjust for smaller screens */
-    }
-
-    .enroll-btn {
-        font-size: 14px; /* Smaller font size */
-        padding: 8px 15px; /* Adjust padding */
-    }
-}
-</style>
 
     <!-- banner section start here -->
-    <section class="banner-section style-1">
-        <div class="container"  style="background-image: url('{{ asset('assets/images/bg.jpg') }}'); 
-        background-size: cover; background-position: center; background-repeat: no-repeat; width: 1920px; height: auto;">
+    <section class="banner-section style-2">
+        <div class="container">
             <div class="section-wrapper">
-                <div class="row align-items-center">
-                    <div class="col-xxl-5 col-xl-6 col-lg-10">
-                        <div class="banner-content">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-xxl-5 col-xl-6 col-lg-10 me-auto">
+                        <div class="banner-content"> 
                             <h6 class="subtitle text-uppercase fw-medium" style="color:#ed3532;">Online education</h6>
-                            <h2 class="title" style="color:#1b2954;"><span class="d-lg-block">Learn The</span> Skills You Need <span class="d-lg-block">To Succeed</span></h2>
-                            <p class="desc">Free online courses from the world’s<br> Leading experts.<br> join 18+ million Learners today.</p>
+                            <h2 class="title" style="color:#1b2954;"><span class="d-lg-block">Build Skills With</span> Experts Any Time <span class="d-lg-block">Anywhere</span></h2>
+                            <p class="desc">Free online courses from the world’s Leading experts. join 18+ million Learners today.</p>
                             <form action="/">
-                                <div class="banner-icon">
-                                    <i class="icofont-search"></i> 
+                                <div class="banner-icon">  
+                                    <i class="icofont-search"></i>
                                 </div>
-                                <input type="text" placeholder="Keywords of your course" style="background-color:#e5e7eb";>
-                                <button type="submit" style="background-color:#edb21e; color:#111827;">Search Course</button>
+                                <input type="text" placeholder="Keywords of your course">
+                                <button type="submit" style="background-color:#ed3532;">Search Course</button>
                             </form>
-                            <div class="banner-catagory d-flex flex-wrap" style="margin: top 40px;">
+                            <div class="banner-catagory d-flex flex-wrap">
                                 <p>Most Popular : </p>
                                 <ul class="lab-ul d-flex flex-wrap">
                                     <li><a href="#">Figma</a></li>
@@ -114,208 +34,98 @@
                         </div>
                     </div>
                     <div class="col-xxl-7 col-xl-6">
-                        <div class="banner-thumb">
-                        <video autoplay loop muted playsinline style="animation: none; display: block; width: 350px; 
-                        height: auto; border-radius: 50px;">
-                            <source src="{{asset('assets/images/lms.mp4')}}" type="video/mp4">
-                        </video>  
+                        <div class="thumb-part">
+                            <div class="banner-thumb text-center">
+                                <img src="assets/images/banner/02.png" alt="img">
+                            </div>
+                            <div class="abs-thumb d-none d-xxl-block">
+                                <img src="assets/images/banner/03.png" alt="img">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!--Enroll-->
-        <div class="enroll-section">
-            <a href="#" class="enroll-btn">Student Info</a>
-        </div>
-        <!--end enroll-->
-
-
-        <div class="all-shapes"></div>
-        <div class="cbs-content-list d-none">
-            <ul class="lab-ul">
-                <li class="ccl-shape shape-1"><a href="#">16M Students Happy</a></li>
-                <li class="ccl-shape shape-2"><a href="#">130K+ Total Courses</a></li>
-                <li class="ccl-shape shape-3"><a href="#">89% Successful Students</a></li>
-                <li class="ccl-shape shape-4"><a href="#">23M+ Learners</a></li>
-                <li class="ccl-shape shape-5"><a href="#">36+ Languages</a></li>
-            </ul>
         </div>
     </section>
     <!-- banner section ending here -->
 
-
-    <!-- sponsor section start here -->
-    <div class="sponsor-section section-bg">
+    <!-- About section start here -->
+    <div class="about-section style-2 section-bg">
         <div class="container">
-            <div class="section-wrapper">
-                <div class="sponsor-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/01.png" alt="sponsor">
-                                </div>
-                            </div>
+            <div class="row justify-content-center row-cols-lg-3 row-cols-sm-2 row-cols-1">
+                <div class="col">
+                    <div class="about-right">
+                        <div class="section-wrapper">
+                            <ul class="lab-ul">
+                                <li>
+                                    <div class="sr-left">
+                                        <img src="assets/images/about/icon/03.jpg" alt="about icon">
+                                    </div>
+                                    <div class="sr-right">
+                                        <h5 >30,000+ Online Courses</h5>
+                                        <p>Grow your knowledge and your training and tools.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/02.png" alt="sponsor">
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-right">
+                        <div class="section-wrapper">
+                            <ul class="lab-ul">
+                                <li>
+                                    <div class="sr-left">
+                                        <img src="assets/images/about/icon/01.jpg" alt="about icon">
+                                    </div>
+                                    <div class="sr-right">
+                                        <h5>Experts Teachers</h5>
+                                        <p>Grow your knowledge and your training and tools.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/03.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/04.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/05.png" alt="sponsor">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sponsor-iten">
-                                <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/06.png" alt="sponsor">
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-right">
+                        <div class="section-wrapper">
+                            <ul class="lab-ul">
+                                <li>
+                                    <div class="sr-left">
+                                        <img src="assets/images/about/icon/02.jpg" alt="about icon">
+                                    </div>
+                                    <div class="sr-right">
+                                        <h5>Lifetime Access</h5>
+                                        <p>Grow your knowledge and your training and tools.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- sponsor section ending here -->
-
-
-    <!-- category section start here -->
-    <div class="category-section padding-tb">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle" style="color:#ed3532;">Popular Category</span>
-                <h2 class="title" style="color:#1b2954;">Popular Category For Learn</h2>
-            </div>
-            <div class="section-wrapper">
-                <div class="row g-2 justify-content-center row-cols-xl-6 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                    <div class="col">
-                        <div class="category-item text-center">
-                            <div class="category-inner">
-                                <div class="category-thumb">
-                                    <img src="assets/images/category/icon/01.jpg" alt="category">
-                                </div>
-                                <div class="category-content">
-                                    <a href="course.html"><h6>Computer Science</h6></a>
-                                    <span>24 Course</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="category-item text-center">
-                            <div class="category-inner">
-                                <div class="category-thumb">
-                                    <img src="assets/images/category/icon/02.jpg" alt="category">
-                                </div>
-                                <div class="category-content">
-                                    <a href="course.html"><h6>Civil Engineering</h6></a>
-                                    <span>40 Course</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="category-item text-center">
-                            <div class="category-inner">
-                                <div class="category-thumb">
-                                    <img src="assets/images/category/icon/03.jpg" alt="category">
-                                </div>
-                                <div class="category-content">
-                                    <a href="course.html"><h6>Business Analysis</h6></a>
-                                    <span>27 Course</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="category-item text-center">
-                            <div class="category-inner">
-                                <div class="category-thumb">
-                                    <img src="assets/images/category/icon/04.jpg" alt="category">
-                                </div>
-                                <div class="category-content">
-                                    <a href="course.html"><h6>Data Science Analytics</h6></a>
-                                    <span>28 Course</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="category-item text-center">
-                            <div class="category-inner">
-                                <div class="category-thumb">
-                                    <img src="assets/images/category/icon/05.jpg" alt="category">
-                                </div>
-                                <div class="category-content">
-                                    <a href="course.html"><h6>Learning Management</h6></a>
-                                    <span>78 Course</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="category-item text-center">
-                            <div class="category-inner">
-                                <div class="category-thumb">
-                                    <img src="assets/images/category/icon/06.jpg" alt="category">
-                                </div>
-                                <div class="category-content">
-                                    <a href="course.html"><h6>Computer Engineering</h6></a>
-                                    <span>38 Course</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="course.html" class="lab-btn"  style="background-color:#1b2954;"><span>Browse All Categories</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- category section start here -->
-
+    <!-- About section ending here -->
 
     <!-- course section start here -->
-    <div class="course-section padding-tb section-bg">
+    <div class="course-section padding-tb">
         <div class="container">
-            <div class="section-header text-center" >
-                <span class="subtitle" style="color:#ed3532;">Featured Courses</span>
-                <h2 class="title"  style="color:#1b2954;">Pick A Course To Get Started</h2>
+            <div class="section-header text-center">
+                <span class="subtitle" style="color:#ed3532;" >Featured Courses</span>
+                <h2 class="title" style="color:#1b2954;">Pick A Course To Get Started</h2>
             </div>
             <div class="section-wrapper">
-                <div class="row g-4 justify-content-center row-cols-xl-3 row-cols-md-2 row-cols-1">
+                <div class="row g-4 justify-content-center row-cols-lg-2 row-cols-1">
                     <div class="col">
-                        <div class="course-item">
+                        <div class="course-item style-2">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/01.jpg" alt="course">
+                                    <img src="assets/images/course/07.jpg" alt="course">
+                                    <div class="course-price">$30</div>
                                 </div>
                                 <div class="course-content">
-                                    <div class="course-price">$30</div>
                                     <div class="course-category">
                                         <div class="course-cate">
                                             <a href="#">Adobe XD</a>
@@ -352,13 +162,13 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="course-item">
+                        <div class="course-item style-2">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/02.jpg" alt="course">
+                                    <img src="assets/images/course/08.jpg" alt="course">
+                                    <div class="course-price">$30</div>
                                 </div>
                                 <div class="course-content">
-                                    <div class="course-price">$30</div>
                                     <div class="course-category">
                                         <div class="course-cate">
                                             <a href="#">Photoshop</a>
@@ -395,13 +205,13 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="course-item">
+                        <div class="course-item style-2">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/03.jpg" alt="course">
+                                    <img src="assets/images/course/09.jpg" alt="course">
+                                    <div class="course-price">$30</div>
                                 </div>
                                 <div class="course-content">
-                                    <div class="course-price">$30</div>
                                     <div class="course-category">
                                         <div class="course-cate">
                                             <a href="#">Photoshop</a>
@@ -438,13 +248,13 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="course-item">
+                        <div class="course-item style-2">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/04.jpg" alt="course">
+                                    <img src="assets/images/course/10.jpg" alt="course">
+                                    <div class="course-price">$30</div>
                                 </div>
                                 <div class="course-content">
-                                    <div class="course-price">$30</div>
                                     <div class="course-category">
                                         <div class="course-cate">
                                             <a href="#">Adobe XD</a>
@@ -481,13 +291,13 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="course-item">
+                        <div class="course-item style-2">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/05.jpg" alt="course">
+                                    <img src="assets/images/course/11.jpg" alt="course">
+                                    <div class="course-price">$30</div>
                                 </div>
                                 <div class="course-content">
-                                    <div class="course-price">$30</div>
                                     <div class="course-category">
                                         <div class="course-cate">
                                             <a href="#">Adobe XD</a>
@@ -524,13 +334,13 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="course-item">
+                        <div class="course-item style-2">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/06.jpg" alt="course">
+                                    <img src="assets/images/course/12.jpg" alt="course">
+                                    <div class="course-price">$30</div>
                                 </div>
                                 <div class="course-content">
-                                    <div class="course-price">$30</div>
                                     <div class="course-category">
                                         <div class="course-cate">
                                             <a href="#">Adobe XD</a>
@@ -572,193 +382,132 @@
     </div>
     <!-- course section ending here -->
 
-
-    <!-- abouts section start here -->
-    <div class="about-section">
-        <div class="container">
-            <div class="row justify-content-center row-cols-xl-2 row-cols-1 align-items-end flex-row-reverse">
-                <div class="col">
-                    <div class="about-right padding-tb">
-                        <div class="section-header">
-                            <span class="subtitle" style="color:#ed3532;">About Our Edukon</span>
-                            <h2 class="title"  style="color:#1b2954;">Good Qualification Services And Better Skills</h2>
-                            <p>Distinctively provide acces mutfuncto users whereas transparent proceses somes ncentivize eficient functionalities rather than extensible archtectur communicate leveraged services and cross-platform.</p>
-                        </div>
-                        <div class="section-wrapper">
-                            <ul class="lab-ul">
-                                <li>
-                                    <div class="sr-left">
-                                        <img src="{{ asset('assets/images/skill.jpeg') }}" alt="about icon">
-                                    </div>
-                                    <div class="sr-right">
-                                        <h5>Skilled Instructors</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sr-left">
-                                        <img src="{{ asset('assets/images/certificate.jpeg') }}" alt="about icon">
-                                    </div>
-                                    <div class="sr-right">
-                                        <h5>Get Certificate</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sr-left">
-                                        <img src="{{ asset('assets/images/online.jpeg') }}" alt="about icon">
-                                    </div>
-                                    <div class="sr-right">
-                                        <h5>Online Classes</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="about-left">
-                        <div class="about-thumb">
-                            <img src="{{asset('assets/images/habout.gif')}}" alt="about" style="height:600px; width:auto;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- about section ending here -->
-
-
-    <!-- Instructors Section Start Here -->
-    <div class="instructor-section padding-tb section-bg">
+    <!-- category section start here -->
+    <div class="category-section padding-tb section-bg style-2">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle" style="color:#ed3532;">World-class Instructors</span>
-                <h2 class="title" style="color:#1b2954;">Classes Taught By Real Creators</h2>
+                <span class="subtitle" style="color:#ed3532;"  >Popular Category</span>
+                <h2 class="title" style="color:#1b2954;"  style="color:#1b2954;">Popular Category For Learn</h2>
             </div>
             <div class="section-wrapper">
-                <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+                <div class="row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
                     <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/01.jpg" alt="instructor">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/07.jpg" alt="category">
                                 </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Emilee Logan</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Computer Science</h6></a>
+                                    <span>24 Course</span>
                                 </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/02.jpg" alt="instructor">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/08.jpg" alt="category">
                                 </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Donald Logan</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Civil Engineering</h6></a>
+                                    <span>63 Course</span>
                                 </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/03.jpg" alt="instructor">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/09.jpg" alt="category">
                                 </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Oliver Porter</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Business Analysis</h6></a>
+                                    <span>63 Course</span>
                                 </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="instructor-item">
-                            <div class="instructor-inner">
-                                <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/04.jpg" alt="instructor">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/10.jpg" alt="category">
                                 </div>
-                                <div class="instructor-content">
-                                    <a href="team-single.html"><h4>Nahla Jones</h4></a>
-                                    <p>Master of Education Degree</p>
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Data Science Analytics</h6></a>
+                                    <span>65 Course</span>
                                 </div>
-                            </div>
-                            <div class="instructor-footer">
-                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="text-center footer-btn">
-                    <p>Want to help people learn, grow and achieve more in life?<a href="team.html">Become an instructor</a></p>
+                    <div class="col">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/11.jpg" alt="category">
+                                </div>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Learning Management</h6></a>
+                                    <span>78 Course</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/12.jpg" alt="category">
+                                </div>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Computer Engineering</h6></a>
+                                    <span>92 Course</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/13.jpg" alt="category">
+                                </div>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Design Architect</h6></a>
+                                    <span>68 Course</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-item text-center">
+                            <div class="category-inner">
+                                <div class="category-thumb">
+                                    <img src="assets/images/category/icon/14.jpg" alt="category">
+                                </div>
+                                <div class="category-content">
+                                    <a href="course.html"><h6>Foreign Language</h6></a>
+                                    <span>48 Course</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Instructors Section Ending Here -->
+    <!-- category section start here -->
 
-
+    
     <!-- student feedbak section start here -->
     <div class="student-feedbak-section padding-tb shape-img">
         <div class="container">
             <div class="section-header text-center">
                 <span class="subtitle" style="color:#ed3532;">Loved by 200,000+ students</span>
-                <h2 class="title" style="color:#1b2954;">Students Community Feedback</h2>
+                <h2 class="title"  style="color:#1b2954;">Students Community Feedback</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row justify-content-center row-cols-lg-2 row-cols-1">
@@ -832,13 +581,265 @@
     </div>
     <!-- student feedbak section ending here -->
 
-
-    <!-- blog section start here -->
-    <div class="blog-section padding-tb section-bg">
+    <!-- Instructors Section Start Here -->
+    <div class="instructor-section padding-tb section-bg">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle" style="color:#ed3532;">FORM OUR BLOG POSTS</span>
-                <h2 class="title"style="color:#1b2954;">More Articles From Resource Library</h2>
+                <span class="subtitle" style="color:#ed3532;" >World-class Instructors</span>
+                <h2 class="title"  style="color:#1b2954;">Classes Taught By Real Creators</h2>
+            </div>
+            <div class="section-wrapper">
+                <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+                    <div class="col">
+                        <div class="instructor-item">
+                            <div class="instructor-inner">
+                                <div class="instructor-thumb">
+                                    <img src="assets/images/instructor/01.jpg" alt="instructor">
+                                </div>
+                                <div class="instructor-content">
+                                    <a href="team.html"><h4>Emilee Logan</h4></a>
+                                    <p>Master of Education Degree</p>
+                                    <span class="ratting">
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="instructor-footer">
+                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
+                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
+                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="instructor-item">
+                            <div class="instructor-inner">
+                                <div class="instructor-thumb">
+                                    <img src="assets/images/instructor/02.jpg" alt="instructor">
+                                </div>
+                                <div class="instructor-content">
+                                    <a href="team.html"><h4>Donald Logan</h4></a>
+                                    <p>Master of Education Degree</p>
+                                    <span class="ratting">
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="instructor-footer">
+                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
+                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
+                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="instructor-item">
+                            <div class="instructor-inner">
+                                <div class="instructor-thumb">
+                                    <img src="assets/images/instructor/03.jpg" alt="instructor">
+                                </div>
+                                <div class="instructor-content">
+                                    <a href="team.html"><h4>Oliver Porter</h4></a>
+                                    <p>Master of Education Degree</p>
+                                    <span class="ratting">
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="instructor-footer">
+                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
+                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
+                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="instructor-item">
+                            <div class="instructor-inner">
+                                <div class="instructor-thumb">
+                                    <img src="assets/images/instructor/04.jpg" alt="instructor">
+                                </div>
+                                <div class="instructor-content">
+                                    <a href="team.html"><h4>Nahla Jones</h4></a>
+                                    <p>Master of Education Degree</p>
+                                    <span class="ratting">
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                        <i class="icofont-ui-rating"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="instructor-footer">
+                                <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
+                                    <li><i class="icofont-book-alt"></i> 08 courses</li>
+                                    <li><i class="icofont-users-alt-3"></i> 30 students</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center footer-btn">
+                    <p>Want to help people learn, grow and achieve more in life?<a href="team.html">Become an instructor</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Instructors Section Ending Here -->
+
+    <!-- Skill section start here -->
+    <div class="skill-section padding-tb">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-12">
+                    <div class="section-header">
+                        <h2 class="title">Build Your Project Management Skills Online Anytime</h2>
+                        <a href="#" class="lab-btn"><span>Sign Up Now</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="section-wrpper">
+                        <div class="row g-4 justify-content-center row-cols-sm-2 row-cols-1">
+                            <div class="col">
+                                <div class="skill-item">
+                                    <div class="skill-inner">
+                                        <div class="skill-thumb">
+                                            <img src="assets/images/skill/icon/01.jpg" alt="skill thumb">
+                                        </div>
+                                        <div class="skill-content">
+                                            <h5>Skilled Instructors</h5>
+                                            <p>You pick the schedule.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="skill-item">
+                                    <div class="skill-inner">
+                                        <div class="skill-thumb">
+                                            <img src="assets/images/skill/icon/02.jpg" alt="skill thumb">
+                                        </div>
+                                        <div class="skill-content">
+                                            <h5>Get Certificate</h5>
+                                            <p>You pick the schedule.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="skill-item">
+                                    <div class="skill-inner">
+                                        <div class="skill-thumb">
+                                            <img src="assets/images/skill/icon/03.jpg" alt="skill thumb">
+                                        </div>
+                                        <div class="skill-content">
+                                            <h5>Online Classes</h5>
+                                            <p>You pick the schedule.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="skill-item">
+                                    <div class="skill-inner">
+                                        <div class="skill-thumb">
+                                            <img src="assets/images/skill/icon/04.jpg" alt="skill thumb">
+                                        </div>
+                                        <div class="skill-content">
+                                            <h5>Educator Helps</h5>
+                                            <p>You pick the schedule.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skill section ending here -->
+
+
+    <!-- Achievement section start here -->
+    <div class="achievement-section style-2 padding-tb">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle" style="color:#ed3532;">START TO SUCCESS</span>
+                <h2 class="title" style="color:#1b2954;">Achieve Your Goals With Edukon</h2>
+            </div>
+            <div class="section-wrapper">
+                <div class="counter-part">
+                    <div class="row g-4 row-cols-lg-4 row-cols-sm-2 row-cols-1 justify-content-center">
+                        <div class="col">
+                            <div class="count-item">
+                                <div class="count-inner">
+                                    <div class="count-content">
+                                        <h2><span class="count" data-to="30" data-speed="1500"></span><span>+</span></h2>
+                                        <p>Years of Language Education Experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="count-item">
+                                <div class="count-inner">
+                                    <div class="count-content">
+                                        <h2><span class="count" data-to="3080" data-speed="1500"></span><span>+</span></h2>
+                                        <p>Learners Enrolled in Edukon Courses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="count-item">
+                                <div class="count-inner">
+                                    <div class="count-content">
+                                        <h2><span class="count" data-to="330" data-speed="1500"></span><span>+</span></h2>
+                                        <p>Qualified Teachers And Language Experts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="count-item">
+                                <div class="count-inner">
+                                    <div class="count-content">
+                                        <h2><span class="count" data-to="2300" data-speed="1500"></span><span>+</span></h2>
+                                        <p>Innovative Foreign Language Courses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Achievement section ending here -->
+
+    <!-- blog section start here -->
+    <div class="blog-section padding-tb">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle" style="color:#ed3532;" >FORM OUR BLOG POSTS</span>
+                <h2 class="title" style="color:#1b2954;">More Articles From Resource Library</h2>
             </div>
             <div class="section-wrapper">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4">
@@ -932,86 +933,51 @@
     </div>
     <!-- blog section ending here -->
 
-
-    <!-- Achievement section start here -->
-    <div class="achievement-section padding-tb">
+    <!-- sponsor section start here -->
+    <div class="sponsor-section section-bg">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle" style="color:#ed3532;"  >START TO SUCCESS</span>
-                <h2 class="title" style="color:#1b2954;">Achieve Your Goals With Edukon</h2>
-            </div>
             <div class="section-wrapper">
-                <div class="counter-part mb-4">
-                    <div class="row g-4 row-cols-lg-4 row-cols-sm-2 row-cols-1 justify-content-center">
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="30" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Years of Language Education Experience</p>
-                                    </div>
+                <div class="sponsor-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="sponsor-iten">
+                                <div class="sponsor-thumb">
+                                    <img src="assets/images/sponsor/01.png" alt="sponsor">
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="3080" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Learners Enrolled in Edukon Courses</p>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-iten">
+                                <div class="sponsor-thumb">
+                                    <img src="assets/images/sponsor/02.png" alt="sponsor">
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="330" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Qualified Teachers And Language Experts</p>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-iten">
+                                <div class="sponsor-thumb">
+                                    <img src="assets/images/sponsor/03.png" alt="sponsor">
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="count-item">
-                                <div class="count-inner">
-                                    <div class="count-content">
-                                        <h2><span class="count" data-to="2300" data-speed="1500"></span><span>+</span></h2>
-                                        <p>Innovative Foreign Language Courses</p>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-iten">
+                                <div class="sponsor-thumb">
+                                    <img src="assets/images/sponsor/04.png" alt="sponsor">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="achieve-part">
-                    <div class="row g-4 row-cols-1 row-cols-lg-2">
-                        <div class="col">
-                            <div class="achieve-item">
-                                <div class="achieve-inner">
-                                    <div class="achieve-thumb">
-                                        <img src="assets/images/achive/01.png" alt="achieve thumb">
-                                    </div>
-                                    <div class="achieve-content">
-                                        <h4>Start Teaching Today</h4>
-                                        <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                        <a href="#" class="lab-btn" style="color:#edb21e;"><span>Become A Instructor</span></a>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-iten">
+                                <div class="sponsor-thumb">
+                                    <img src="assets/images/sponsor/05.png" alt="sponsor">
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="achieve-item">
-                                <div class="achieve-inner">
-                                    <div class="achieve-thumb">
-                                        <img src="assets/images/achive/02.png" alt="achieve thumb">
-                                    </div>
-                                    <div class="achieve-content">
-                                        <h4>If You Join Our Course</h4>
-                                        <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                        <a href="#" class="lab-btn" style="color:#ed3532;"><span>Register For Free</span></a>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-iten">
+                                <div class="sponsor-thumb">
+                                    <img src="assets/images/sponsor/06.png" alt="sponsor">
                                 </div>
                             </div>
                         </div>
@@ -1020,7 +986,6 @@
             </div>
         </div>
     </div>
-    <!-- Achievement section ending here -->
+    <!-- sponsor section ending here -->
 
-@endsection
-
+    @endsection
