@@ -3,6 +3,87 @@
 @section('title', 'Home - Edukon')
 
 @section('content')
+<style>
+/* Enroll Section */
+.enroll-section {
+    position: fixed; /* Keeps the button fixed */
+    top: 50%; /* Center vertically */
+    right: 20px; /* Align to the right */
+    transform: translateY(-50%); /* Perfect vertical alignment */
+    display: flex; /* Flexbox to align */
+    flex-direction: column; /* Vertical alignment */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    z-index: 1000; /* Keep on top of other content */
+}
+
+/* Enroll Button */
+.enroll-btn {
+    background-color:rgb(12, 102, 199); /* Button color (blue) */
+    color:rgb(255, 255, 255); /* Text color */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    padding: 6px 15px; /* Space inside the button */
+    border-radius: 20px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth hover animation */
+    writing-mode: vertical-rl; /* Rotate the text vertically */
+    text-orientation: upright; /* Ensure letters stay upright */
+}
+
+/* Hover Effect for Button */
+.enroll-btn:hover {
+    background-color:rgb(21, 133, 252); /* Darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.h6 {
+    position: relative;
+    animation: fall 2s ease-in-out;
+}
+@keyframes fall{
+    0%{
+        transform: translatey(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+.h2{
+    animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+     }
+}
+@keyframes blink-caret{
+    from,to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: black;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .enroll-section {
+        right: 10px; /* Adjust for smaller screens */
+    }
+
+    .enroll-btn {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+}
+</style>
+
     <!-- banner section start here -->
     <section class="banner-section style-1">
         <div class="container"  style="background-image: url('{{ asset('assets/images/bg.jpg') }}'); 
@@ -34,7 +115,8 @@
                     </div>
                     <div class="col-xxl-7 col-xl-6">
                         <div class="banner-thumb">
-                        <video autoplay loop muted playsinline style="animation: none; display: block; width: 350px; height: auto;">
+                        <video autoplay loop muted playsinline style="animation: none; display: block; width: 350px; 
+                        height: auto; border-radius: 50px;">
                             <source src="{{asset('assets/images/lms.mp4')}}" type="video/mp4">
                         </video>  
                         </div>
@@ -42,6 +124,14 @@
                 </div>
             </div>
         </div>
+
+        <!--Enroll-->
+        <div class="enroll-section">
+            <a href="#" class="enroll-btn">Student Info</a>
+        </div>
+        <!--end enroll-->
+
+
         <div class="all-shapes"></div>
         <div class="cbs-content-list d-none">
             <ul class="lab-ul">
@@ -201,7 +291,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a href="course.html" class="lab-btn"><span>Browse All Categories</span></a>
+                    <a href="course.html" class="lab-btn"  style="background-color:#1b2954;"><span>Browse All Categories</span></a>
                 </div>
             </div>
         </div>
@@ -906,7 +996,7 @@
                                     <div class="achieve-content">
                                         <h4>Start Teaching Today</h4>
                                         <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                        <a href="#" class="lab-btn"><span>Become A Instructor</span></a>
+                                        <a href="#" class="lab-btn" style="color:#edb21e;"><span>Become A Instructor</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -920,7 +1010,7 @@
                                     <div class="achieve-content">
                                         <h4>If You Join Our Course</h4>
                                         <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                        <a href="#" class="lab-btn"><span>Register For Free</span></a>
+                                        <a href="#" class="lab-btn" style="color:#ed3532;"><span>Register For Free</span></a>
                                     </div>
                                 </div>
                             </div>

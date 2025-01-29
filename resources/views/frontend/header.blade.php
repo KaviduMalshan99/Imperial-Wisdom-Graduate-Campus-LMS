@@ -3,9 +3,62 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
+    .header-top {
+    background-color: #003366; 
+    color: #fff; 
+    padding: 10px 0; 
+}
+.header-top a {
+    color: #FFD700; 
+    font-size: 14px; 
+    font-weight: bold; 
+}
+.header-top a:hover {
+    color: #ff6600; 
+    text-decoration: underline; 
+}
+.menu ul li a {
+    color:rgb(3, 3, 3);
+    font-size: 15px; 
+    font-weight: bold; 
+    padding: 8px 15px; 
+    transition: all 0.3s ease;
+}
+.menu ul li ul li a:hover {
+    color:rgb(255, 255, 255); 
+    background-color: transparent; 
+    border-bottom: 2px solid #FFD700; 
+}
+.signup {
+    background-color: #ff6600;
+    border: 1px solid #cc5200; 
+    color: #fff; 
+    font-size: 14px; 
+    padding: 8px 20px; 
+    border-radius: 20px; 
+    text-transform: uppercase;
+}
+.signup:hover {
+    background-color: #cc5200;
+    color: #FFFFFF; 
+}
+.login {
+    background-color: transparent; 
+    border: 1px solid #FFD700; 
+    color: #FFD700; 
+    font-size: 14px;
+    padding: 8px 20px; 
+    border-radius: 20px; 
+    text-transform: uppercase; 
+}
+.login:hover {
+    background-color: #FFD700; 
+    color: #003366; 
+}
         .auth-buttons {
-            margin-left: auto; /* Move buttons to the right */
+            margin-left: auto; 
         }
+
         .login,
         .signup {
             display: inline-block;
@@ -13,10 +66,12 @@
             padding: 10px 20px;
             font-size: 14px;
             font-weight: bold;
-            border-radius: 25px; /* Rounded corners */
-            color: white; /* Text color */
-            background-color:rgb(237, 53, 50); /* Button background */
-            transition: all 0.3s ease; /* Smooth hover effect */
+
+            border-radius: 25px; 
+            color: white; 
+            background-color:rgb(237, 53, 50); 
+            transition: all 0.3s ease; 
+
         }
         .login{
             display: inline-block;
@@ -24,11 +79,13 @@
             padding: 10px 20px;
             font-size: 14px;
             font-weight: bold;
-            border: 1px solidrgb(248, 205, 188); /* Border color */
-            border-radius: 25px; /* Rounded corners */
-            color: rgb(237, 53, 50); /* Text color */
-            background-color:rgb(27, 41, 84); /* Button background */
-            transition: all 0.3s ease; /* Smooth hover effect */
+
+            border: 1px solidrgb(248, 205, 188); 
+            border-radius: 25px; 
+            color: rgb(237, 53, 50); 
+            background-color:rgb(27, 41, 84);
+            transition: all 0.3s ease; 
+
         }
         .signup {
             border:rgb(254, 108, 18);
@@ -37,8 +94,8 @@
         .i:hover,
         .login:hover,
         .signup:hover {
-            background-color: transparent; /* Transparent on hover */
-            color: #000; /* Change text color on hover */
+            background-color: transparent; 
+            color: #000; 
         }
         .signup:hover {
             border-color:rgb(254, 108, 18);
@@ -50,84 +107,90 @@
 
         /* General Menu Styling */
         .menu {
-            display: flex; /* Use flexbox for alignment */
-            justify-content: flex-end; /* Align items to the right */
+            display: flex; 
+            justify-content: flex-end;
         }
         .menu ul {
-            list-style: none; /* Remove bullets */
+            list-style: none; 
             margin: 0;
             padding: 0;
-            display: flex; /* Align items in a row */
+            display: flex;
         }
         .menu ul :hover {
-            color:rgb(237, 53, 50); /* Change text color on hover */
+
+            color:rgb(237, 53, 50); 
+
         }
         .menu ul li {
-            position: relative; /* For dropdown positioning */
-            margin-left: 20px; /* Add spacing between menu items */
+            position: relative; 
+            margin-left: 20px; 
         }
         .menu ul li a {
-            text-decoration: none; /* Remove underline */
-            padding: 10px 15px; /* Add padding for clickable area */
+            text-decoration: none; 
+            padding: 10px 15px; 
             display: inline-block;
-            color: #333; /* Menu text color */
+            color: #333; 
             font-weight: bold;
         }
         .menu ul li a:hover {
-            color: rgb(237, 53, 50); /* Change text color on hover */
+
+            color: rgb(237, 53, 50); 
+
         }
         .menu ul li ul {
-            position: absolute; /* Position dropdown below parent */
+            position: absolute; 
             top: 100%;
             left: 0;
-            background: #f9f9f9; /* Dropdown background */
-            border: 1px solid #ddd; /* Border for dropdown */
-            display: none; /* Initially hide dropdown */
+            background: #f9f9f9; 
+            border: 1px solid #ddd; 
+            display: none; 
             padding: 10px 0;
             z-index: 1000;
         }
         .menu ul li:hover ul {
-            display: block; /* Show dropdown on hover */
+            display: block; 
         }
         .menu ul li ul li {
-            margin: 0; /* Remove spacing for dropdown items */
+            margin: 0; 
         }
         .menu ul li ul li a {
-            padding: 8px 20px; /* Adjust padding for dropdown items */
-            display: block; /* Full-width links for dropdown */
+            padding: 8px 20px; 
+            display: block;
             color: #000;
         }
         .menu ul li ul li a:hover {
-            background:rgb(27, 41, 84); /* Highlight background on hover */
-            color: #fff; /* Text color on hover */
+
+            background:rgb(7, 29, 77); 
+            color: rgb(255, 255, 255); 
+
         }
-        .menu-area ul.lab-ul > li > a:hover {
+        .menu-area ul li a:hover {
             transform: scale(1.2); 
-            color: #f9f9f9; 
+            color:rgb(0, 0, 0); 
         }
         .menu ul > a:hover {
             transform: scale(1.2); 
-            color:rgb(237, 53, 50); 
-        }
-        
-        .menu ul li::before {
-            content: ""; 
-        }
+            color:rgb(50, 184, 237); 
 
+        }
+        .menu ul li::before {
+        content: ""; 
+
+        }
         .header-bottom .menu-area .menu ul li a::after {
             content: '';
             position: absolute;
             left: 50%;
-            bottom: -5px; /* Adjust spacing below text */
+            bottom: -5px; 
             width: 0%;
             height: 2px;
-            background-color: #ffcc00; /* Underline color */
+            background-color: #ffcc00;
             transition: all 0.3s ease-in-out;
             transform: translateX(-50%);
         }
 
         i {
-           color: #f9f9f9 ;
+           color:rgb(237, 128, 30) !important;
         }   
 
         i :hover {
@@ -142,19 +205,17 @@
 .header-top a {
     color: white; 
 }
-
 .header-top a:hover {
     color: #FFD700; 
 }
-
 .menu-reduce-btn {
-    text-align: right; /* Aligns the button to the right */
-    margin-top: 10px; /* Adds spacing above the button */
+    text-align: right; 
+    margin-top: 10px; 
 }
-
 .reduce-btn {
-    background-color: #f00; /* Red background color */
-    color: #fff; /* White text color */
+    background-color: #f00; 
+    color: #fff;
+
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -164,11 +225,8 @@
 }
 
 .reduce-btn:hover {
-    background-color: #c00; /* Darker red on hover */
+    background-color: #c00; 
 }
-
-
-
 
     </style>
 
@@ -185,8 +243,9 @@
                         </li>
                     </ul>
                     <ul class="lab-ul social-icons d-flex align-items-center">      
-                        <li></li>              
-                        <li><a href="#" class="fb"><i1 class="icofont-facebook-messenger" style= "color: #f9f9f9"></i></a></li>
+
+                        <li><a href="#" class="fb"><i1 class="icofont-facebook-messenger"></i></a></li>
+
                         <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
                         <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
                         <li><a href="#" class="skype"><i class="icofont-skype"></i></a></li>
@@ -211,30 +270,59 @@
                         <div class="menu"  >
                             <ul class="lab-ul right" >
                                 <li>
-                                    <a href="#0">Home</a>
+
+                                    <a href="{{ route('frontend.home') }}">Home</a>
+                                    <ul class="lab-ul">
+                                    <li><a href="{{ route('frontend.home') }}">Home One</a></li>
+                                    <li><a href="{{ route('frontend.Home_Two') }}">Home Two</a></li>
+                                    <li><a href="{{ route('frontend.Home_Three') }}">Home Three</a></li>
+                                    <li><a href="{{ route('frontend.Home_Four') }}">Home Four</a></li>
+                                    <li><a href="{{ route('frontend.Home_Five') }}">Home Five</a></li>
+                                    <li><a href="{{ route('frontend.Home_Six') }}">Home Six</a></li>
+                                    <li><a href="{{ route('frontend.Home_Seven') }}">Home Seven</a></li>
+                                </ul>
+
                                     
                                 </li>
                                 
                                 <li>
-                                    <a href="">About</a>
+
+                                    <a href="">About Us</a>
                                     
                                 </li>
                                 <li>
-                                    <a href="#0">Study Abord</a>
+                                    <a href="{{ route('frontend.study') }}">Study Abroad</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="#0">Transfer Pathway</a>
+                                        <ul class="lab-ul">
+                                            <li><a href="">Australia</a></li>
+                                            <li><a href="">UK</a></li>
+                                        </ul></li>
+                                        </li>
+                                        <li><a href="#0">Direct Placement</a>
+                                        <ul class="lab-ul">
+                                            <li><a href="">Australia</a></li>
+                                            <li><a href="">UK</a></li>
+                                        </ul></li>
+                                        <li><a href="#0">UAE</a></li>
+                                    </ul>
                                     
                                 </li>
                                 <li><a href="#0">Pay Online</a>
                                     <ul class="lab-ul">
-                                        <li><a href="">International Student</a></li>
+                                        <li><a href="" >International Student</a></li>
+
                                         <li><a href="" >Local Student</a></li>
                                    </ul>
 
                                 </li>        
                                     
 
-                                <li><a href="">Blogs</a></li>
+
+                                <li><a href="#0">Blogs</a></li>
                                    
-                                <li><a href="">Contact</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+
                             </ul>
                         </div>
 
@@ -255,3 +343,4 @@
     <!-- header section ending here -->
 
 
+    

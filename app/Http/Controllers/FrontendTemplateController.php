@@ -121,6 +121,10 @@ class FrontendTemplateController extends Controller
     {
         return view('frontend.forgetpass');
     }
+    public function study()
+    {
+        return view('frontend.study');
+    }
 
 
 
