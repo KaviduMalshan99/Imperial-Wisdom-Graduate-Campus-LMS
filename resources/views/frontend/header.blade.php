@@ -66,10 +66,12 @@
             padding: 10px 20px;
             font-size: 14px;
             font-weight: bold;
+
             border-radius: 25px; 
             color: white; 
             background-color:rgb(237, 53, 50); 
             transition: all 0.3s ease; 
+
         }
         .login{
             display: inline-block;
@@ -77,11 +79,13 @@
             padding: 10px 20px;
             font-size: 14px;
             font-weight: bold;
+
             border: 1px solidrgb(248, 205, 188); 
             border-radius: 25px; 
             color: rgb(237, 53, 50); 
             background-color:rgb(27, 41, 84);
             transition: all 0.3s ease; 
+
         }
         .signup {
             border:rgb(254, 108, 18);
@@ -113,7 +117,9 @@
             display: flex;
         }
         .menu ul :hover {
+
             color:rgb(237, 53, 50); 
+
         }
         .menu ul li {
             position: relative; 
@@ -127,7 +133,9 @@
             font-weight: bold;
         }
         .menu ul li a:hover {
+
             color: rgb(237, 53, 50); 
+
         }
         .menu ul li ul {
             position: absolute; 
@@ -151,8 +159,10 @@
             color: #000;
         }
         .menu ul li ul li a:hover {
+
             background:rgb(7, 29, 77); 
             color: rgb(255, 255, 255); 
+
         }
         .menu-area ul li a:hover {
             transform: scale(1.2); 
@@ -161,9 +171,11 @@
         .menu ul > a:hover {
             transform: scale(1.2); 
             color:rgb(50, 184, 237); 
+
         }
         .menu ul li::before {
         content: ""; 
+
         }
         .header-bottom .menu-area .menu ul li a::after {
             content: '';
@@ -176,9 +188,11 @@
             transition: all 0.3s ease-in-out;
             transform: translateX(-50%);
         }
+
         i {
            color:rgb(237, 128, 30) !important;
         }   
+
         i :hover {
             transform: scale(1.2); 
             color:rgb(200, 81, 30); 
@@ -187,6 +201,7 @@
     background-color: rgb(27, 41, 84) ; 
     color: white; 
 }
+
 .header-top a {
     color: white; 
 }
@@ -200,6 +215,7 @@
 .reduce-btn {
     background-color: #f00; 
     color: #fff;
+
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -207,9 +223,11 @@
     font-size: 14px;
     transition: background-color 0.3s ease;
 }
+
 .reduce-btn:hover {
     background-color: #c00; 
 }
+
     </style>
 
     <header class="header-section">
@@ -225,8 +243,9 @@
                         </li>
                     </ul>
                     <ul class="lab-ul social-icons d-flex align-items-center">      
-                        <li></li>              
+
                         <li><a href="#" class="fb"><i1 class="icofont-facebook-messenger"></i></a></li>
+
                         <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
                         <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
                         <li><a href="#" class="skype"><i class="icofont-skype"></i></a></li>
@@ -248,9 +267,10 @@
                         <a href="index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="logo"  style="width:250px; height:auto"></a>
                     </div> 
                     <div class="menu-area">
-                        <div class="menu" >
-                            <ul class="lab-ul right">
+                        <div class="menu"  >
+                            <ul class="lab-ul right" >
                                 <li>
+
                                     <a href="{{ route('frontend.home') }}">Home</a>
                                     <ul class="lab-ul">
                                     <li><a href="{{ route('frontend.home') }}">Home One</a></li>
@@ -261,10 +281,12 @@
                                     <li><a href="{{ route('frontend.Home_Six') }}">Home Six</a></li>
                                     <li><a href="{{ route('frontend.Home_Seven') }}">Home Seven</a></li>
                                 </ul>
+
                                     
                                 </li>
                                 
                                 <li>
+
                                     <a href="">About Us</a>
                                     
                                 </li>
@@ -289,15 +311,18 @@
                                 <li><a href="#0">Pay Online</a>
                                     <ul class="lab-ul">
                                         <li><a href="" >International Student</a></li>
+
                                         <li><a href="" >Local Student</a></li>
                                    </ul>
 
                                 </li>        
                                     
 
+
                                 <li><a href="#0">Blogs</a></li>
                                    
                                 <li><a href="contact.html">Contact</a></li>
+
                             </ul>
                         </div>
 

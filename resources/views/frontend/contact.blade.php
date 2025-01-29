@@ -4,6 +4,49 @@
 
 @section('content')
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
+.pageheader-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.pageheader-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('{{ asset('assets/images/international-cover1.jpeg') }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.pageheader-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 150px;
+    color: white;
+    text-align: center;
+}
+
+.breadcrumb-item a {
+    color: white;
+}
+
+.pageheader-content h2 {
+    color:rgb(255, 252, 251); /* Replace this with your desired color code */
+    font-weight: bold; /* Optional: To make the text bold */
+}
+
+</style>
+
     <!-- Page Header section start here -->
     <div class="pageheader-section">
         <div class="container">
@@ -28,7 +71,7 @@
     <div class="map-address-section padding-tb section-bg">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Get in touch with us</span>
+                <span class="subtitle" style="color: rgb(237, 128, 30);">Get in touch with us</span>
                 <h2 class="title">We're Always Eager To Hear From You!</h2>
             </div>
             <div class="section-wrapper">
@@ -37,38 +80,40 @@
                         <div class="contact-wrapper">
                             <div class="contact-item">
                                 <div class="contact-thumb">
-                                    <img src="assets/images/icon/01.png" alt="CodexCoder">
+                                <i class="fas fa-map-marker-alt" style="color: rgb(237, 128, 30);"></i>
                                 </div>
                                 <div class="contact-content">
                                     <h6 class="title">Office Address</h6>
-                                    <p>1201 park street, Fifth Avenue</p>
+                                    <p>No 320, 1/1,
+                                       Galle Road, Colombo 3,
+                                       Sri Lanka.</p>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <div class="contact-thumb">
-                                    <img src="assets/images/icon/02.png" alt="CodexCoder">
+                                <i class="fas fa-phone-alt" style="color: rgb(237, 128, 30);"></i>
                                 </div>
                                 <div class="contact-content">
                                     <h6 class="title">Phone number</h6>
-                                    <p>+22698 745 632,02 982 745</p>
+                                    <p>+94 766 888 184</p>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <div class="contact-thumb">
-                                    <img src="assets/images/icon/03.png" alt="CodexCoder">
+                                <i class="fas fa-envelope" style="color: rgb(237, 128, 30);"></i>
                                 </div>
                                 <div class="contact-content">
                                     <h6 class="title">Send email </h6>
-                                    <a href="mailto:info@gmail.com">adminedukon@gmil.com</a>
+                                    <a href="mailto:info@gmail.com">www.info@impwis@gmail.com</a>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <div class="contact-thumb">
-                                    <img src="assets/images/icon/04.png" alt="CodexCoder">
+                                <i class="fas fa-globe" style="color: rgb(237, 128, 30);"></i>
                                 </div>
                                 <div class="contact-content">
                                     <h6 class="title">Our website</h6>
-                                    <a href="#">www.adminedukon@gmil.com</a>
+                                    <a href="#">info@impwis.com</a>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +156,7 @@
                         <textarea name="message" rows="8" id="message" placeholder="Your Message" required></textarea>
                     </div>
                     <div class="form-group w-100 text-center">
-                        <button class="lab-btn"><span>Send our Message</span></button>
+                        <button class="lab-btn" style="background-color:rgb(237, 53, 50); "><span>Send our Message</span></button>
                     </div>
                 </form>
                 <p class="form-message"></p> 
