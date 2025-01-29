@@ -430,4 +430,14 @@ Route::get('/team_single', [FrontendTemplateController::class, 'team_single'])->
 Route::get('/forgetpass', [FrontendTemplateController::class, 'forgetpass'])->name('frontend.forgetpass');
 
 
+Route::view('international-stu', 'frontend.international-stu')->name('international-stu');
+Route::get('/frontend/international-stu', function (){
+    return view('frontend.international-stu');
+})->name('frontend.international-stu');
+Route::get('/frontend/blog', function (){
+    return view('frontend.blog');
+})->name('frontend.blog');
+Route::get('/frontend/contact', function (){
+    return view('frontend.contact');
+})->name('frontend.contact');
 
