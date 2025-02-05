@@ -15,7 +15,7 @@
                         <form action="/">
                             <div class="nf-list">
                                 <input type="email" name="email" placeholder="Enter Your Email">
-                                <input type="submit" name="submit" value="Subscribe Now">
+                                <input type="submit" name="submit"  style="background-color:#ffa600;" value="Subscribe Now">
                             </div>
                         </form>
                     </div>
@@ -115,7 +115,7 @@
             <div class="footer-bottom style-2">
                 <div class="container">
                     <div class="section-wrapper">
-                        <p>&copy; 2021 <a href="index.html">Edukon</a> Designed by <a href="https://themeforest.net/user/CodexCoder" target="_blank">CodexCoder</a> </p>
+                        <p>&copy; 2021 <a href="index.html">Imperial Wisdom</a> Designed by <a href="https://themeforest.net/user/CodexCoder" target="_blank"></a> </p>
                     </div>
                 </div>
             </div>

@@ -85,12 +85,11 @@
 </style>
 
     <!-- banner section start here -->
-    <section class="banner-section style-1">
-        <div class="container"  style="background-image: url('{{ asset('assets/images/bg.jpg') }}'); 
-        background-size: cover; background-position: center; background-repeat: no-repeat; width: 1920px; height: auto;">
+    <section class="banner-section style-1" style="background:#eddddd">
+        <div class="container" >
             <div class="section-wrapper">
                 <div class="row align-items-center">
-                    <div class="col-xxl-5 col-xl-6 col-lg-10">
+                    <div class="col-xxl-6 col-xl-7 col-lg-11">
                         <div class="banner-content">
                             <h6 class="subtitle text-uppercase fw-medium" style="color:#ed3532;">Online education</h6>
                             <h2 class="title" style="color:#1b2954;"><span class="d-lg-block">Learn The</span> Skills You Need <span class="d-lg-block">To Succeed</span></h2>
@@ -113,26 +112,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-7 col-xl-6">
-                        <div class="banner-thumb">
-                        <video autoplay loop muted playsinline style="animation: none; display: block; width: 350px; 
-                        height: auto; border-radius: 50px;">
-                            <source src="{{asset('assets/images/lms.mp4')}}" type="video/mp4">
-                        </video>  
+                    <div class="col-xxl-6 col-xl-5" 
+                            style="background-image: url('{{ asset('assets/images/bg2.png') }}'); 
+                                background-size: cover; 
+                                background-position: center;
+                                min-height:500px;">
                         </div>
-                    </div>
+
+
                 </div>
             </div>
         </div>
 
-        <!--Enroll-->
-        <div class="enroll-section">
-            <a href="#" class="enroll-btn">Student Info</a>
-        </div>
-        <!--end enroll-->
-
-
-        <div class="all-shapes"></div>
+       <!-- <div class="all-shapes"></div> -->
         <div class="cbs-content-list d-none">
             <ul class="lab-ul">
                 <li class="ccl-shape shape-1"><a href="#">16M Students Happy</a></li>
@@ -155,42 +147,42 @@
                         <div class="swiper-slide">
                             <div class="sponsor-iten">
                                 <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/01.png" alt="sponsor">
+                                    <img src="{{ asset('frontend/assets/images/sponsor/01.png') }}" alt="sponsor">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-iten">
                                 <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/02.png" alt="sponsor">
+                                    <img src="{{ asset('frontend/assets/images/sponsor/02.png') }}" alt="sponsor">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-iten">
                                 <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/03.png" alt="sponsor">
+                                    <img src="{{ asset('frontend/assets/images/sponsor/03.png') }}" alt="sponsor">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-iten">
                                 <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/04.png" alt="sponsor">
+                                    <img src="{{ asset('frontend/assets/images/sponsor/04.png') }}" alt="sponsor">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-iten">
                                 <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/05.png" alt="sponsor">
+                                    <img src="{{ asset('frontend/assets/images/sponsor/05.png') }}" alt="sponsor">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-iten">
                                 <div class="sponsor-thumb">
-                                    <img src="assets/images/sponsor/06.png" alt="sponsor">
+                                    <img src="{{ asset('frontend/assets/images/sponsor/06.png') }}" alt="sponsor">
                                 </div>
                             </div>
                         </div>
@@ -215,7 +207,7 @@
                         <div class="category-item text-center">
                             <div class="category-inner">
                                 <div class="category-thumb">
-                                    <img src="assets/images/category/icon/01.jpg" alt="category">
+                                    <img src="{{ asset('frontend/assets/images/category/icon/cs.jpg') }}" style="height:55px" alt="category">
                                 </div>
                                 <div class="category-content">
                                     <a href="course.html"><h6>Computer Science</h6></a>
@@ -228,7 +220,7 @@
                         <div class="category-item text-center">
                             <div class="category-inner">
                                 <div class="category-thumb">
-                                    <img src="assets/images/category/icon/02.jpg" alt="category">
+                                    <img src="{{ asset('frontend/assets/images/category/icon/civil.jpg') }}" style="height:55px" alt="category">
                                 </div>
                                 <div class="category-content">
                                     <a href="course.html"><h6>Civil Engineering</h6></a>
@@ -241,7 +233,7 @@
                         <div class="category-item text-center">
                             <div class="category-inner">
                                 <div class="category-thumb">
-                                    <img src="assets/images/category/icon/03.jpg" alt="category">
+                                    <img src="{{ asset('frontend/assets/images/category/icon/BA.jpg') }}" style="height:55px" alt="category">
                                 </div>
                                 <div class="category-content">
                                     <a href="course.html"><h6>Business Analysis</h6></a>
@@ -254,7 +246,7 @@
                         <div class="category-item text-center">
                             <div class="category-inner">
                                 <div class="category-thumb">
-                                    <img src="assets/images/category/icon/04.jpg" alt="category">
+                                    <img src="{{ asset('frontend/assets/images/category/icon/DS.png') }}" style="height:55px" alt="category">
                                 </div>
                                 <div class="category-content">
                                     <a href="course.html"><h6>Data Science Analytics</h6></a>
@@ -267,7 +259,7 @@
                         <div class="category-item text-center">
                             <div class="category-inner">
                                 <div class="category-thumb">
-                                    <img src="assets/images/category/icon/05.jpg" alt="category">
+                                    <img src="{{ asset('frontend/assets/images/category/icon/lms.png') }}" style="height:55px" alt="category">
                                 </div>
                                 <div class="category-content">
                                     <a href="course.html"><h6>Learning Management</h6></a>
@@ -280,7 +272,7 @@
                         <div class="category-item text-center">
                             <div class="category-inner">
                                 <div class="category-thumb">
-                                    <img src="assets/images/category/icon/06.jpg" alt="category">
+                                    <img src="{{ asset('frontend/assets/images/category/icon/ce.jpeg') }}" style="height:55px" alt="category">
                                 </div>
                                 <div class="category-content">
                                     <a href="course.html"><h6>Computer Engineering</h6></a>
@@ -312,7 +304,7 @@
                         <div class="course-item">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/01.jpg" alt="course">
+                                    <img src="{{ asset('frontend/assets/images/course/bg.jpg') }}" style="height:200px" alt="course">
                                 </div>
                                 <div class="course-content">
                                     <div class="course-price">$30</div>
@@ -340,7 +332,8 @@
                                     </div>
                                     <div class="course-footer">
                                         <div class="course-author">
-                                            <img src="assets/images/course/author/01.jpg" alt="course author">
+                                            <img src="{{ asset('frontend/assets/images/course/author/author1.jpeg') }}"
+                                            style="height:40px" alt="course author">
                                             <a href="team-single.html" class="ca-name">William Smith</a>
                                         </div>
                                         <div class="course-btn">
@@ -355,7 +348,7 @@
                         <div class="course-item">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/02.jpg" alt="course">
+                                    <img src="{{ asset('frontend/assets/images/course/bg2.png') }}" style="height:200px" alt="course">
                                 </div>
                                 <div class="course-content">
                                     <div class="course-price">$30</div>
@@ -383,7 +376,8 @@
                                     </div>
                                     <div class="course-footer">
                                         <div class="course-author">
-                                            <img src="assets/images/course/author/02.jpg" alt="course author">
+                                        <img src="{{ asset('frontend/assets/images/course/author/author1.jpeg') }}"
+                                        style="height:40px" alt="course author">
                                             <a href="team-single.html" class="ca-name">Lora Smith</a>
                                         </div>
                                         <div class="course-btn">
@@ -398,7 +392,7 @@
                         <div class="course-item">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/03.jpg" alt="course">
+                                    <img src="{{ asset('frontend/assets/images/course/bg3.jpg') }}" style="height:200px" alt="course">
                                 </div>
                                 <div class="course-content">
                                     <div class="course-price">$30</div>
@@ -426,7 +420,8 @@
                                     </div>
                                     <div class="course-footer">
                                         <div class="course-author">
-                                            <img src="assets/images/course/author/03.jpg" alt="course author">
+                                        <img src="{{ asset('frontend/assets/images/course/author/author1.jpeg') }}"
+                                        style="height:40px"  alt="course author">
                                             <a href="team-single.html" class="ca-name">Robot Smith</a>
                                         </div>
                                         <div class="course-btn">
@@ -441,7 +436,7 @@
                         <div class="course-item">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/04.jpg" alt="course">
+                                    <img src="{{ asset('frontend/assets/images/course/bg3.jpg') }}" style="height:200px" alt="course">
                                 </div>
                                 <div class="course-content">
                                     <div class="course-price">$30</div>
@@ -469,7 +464,8 @@
                                     </div>
                                     <div class="course-footer">
                                         <div class="course-author">
-                                            <img src="assets/images/course/author/04.jpg" alt="course author">
+                                        <img src="{{ asset('frontend/assets/images/course/author/author1.jpeg') }}"
+                                        style="height:40px" alt="course author">
                                             <a href="team-single.html" class="ca-name">Zinat Zaara</a>
                                         </div>
                                         <div class="course-btn">
@@ -483,8 +479,8 @@
                     <div class="col">
                         <div class="course-item">
                             <div class="course-inner">
-                                <div class="course-thumb">
-                                    <img src="assets/images/course/05.jpg" alt="course">
+                                <div class="course-thumb"> 
+                                    <img src="{{ asset('frontend/assets/images/course/bg.jpg') }}" style="height:200px" alt="course">
                                 </div>
                                 <div class="course-content">
                                     <div class="course-price">$30</div>
@@ -512,7 +508,8 @@
                                     </div>
                                     <div class="course-footer">
                                         <div class="course-author">
-                                            <img src="assets/images/course/author/05.jpg" alt="course author">
+                                        <img src="{{ asset('frontend/assets/images/course/author/author1.jpeg') }}"
+                                        style="height:40px"  alt="course author">
                                             <a href="team-single.html" class="ca-name">Billy Rivera</a>
                                         </div>
                                         <div class="course-btn">
@@ -527,7 +524,7 @@
                         <div class="course-item">
                             <div class="course-inner">
                                 <div class="course-thumb">
-                                    <img src="assets/images/course/06.jpg" alt="course">
+                                    <img src="{{ asset('frontend/assets/images/course/bg2.png') }}" style="height:200px" alt="course">
                                 </div>
                                 <div class="course-content">
                                     <div class="course-price">$30</div>
@@ -555,7 +552,8 @@
                                     </div>
                                     <div class="course-footer">
                                         <div class="course-author">
-                                            <img src="assets/images/course/author/06.jpg" alt="course author">
+                                        <img src="{{ asset('frontend/assets/images/course/author/author1.jpeg') }}"
+                                        style="height:40px" alt="course author">
                                             <a href="team-single.html" class="ca-name">Subrina Kabir</a>
                                         </div>
                                         <div class="course-btn">
@@ -617,10 +615,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="about-left">
+                <div class="col" >
+                    <div class="about-left"  style="margin-bottom:200px;" >
                         <div class="about-thumb">
-                            <img src="{{asset('assets/images/habout.gif')}}" alt="about" style="height:600px; width:auto;">
+                            <img src="{{asset('frontend/assets/images/skill/skill.gif')}}" alt="about" 
+                            style="height:400px; width:auto;">
                         </div>
                     </div>
                 </div>
@@ -643,7 +642,8 @@
                         <div class="instructor-item">
                             <div class="instructor-inner">
                                 <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/01.jpg" alt="instructor">
+                                    <img src="{{asset('frontend/assets/images/instructor/instructor.jpg')}}"
+                                    style="height:90px" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
                                     <a href="team-single.html"><h4>Emilee Logan</h4></a>
@@ -669,7 +669,8 @@
                         <div class="instructor-item">
                             <div class="instructor-inner">
                                 <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/02.jpg" alt="instructor">
+                                <img src="{{asset('frontend/assets/images/instructor/instructor.jpg')}}"
+                                style="height:90px" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
                                     <a href="team-single.html"><h4>Donald Logan</h4></a>
@@ -695,7 +696,8 @@
                         <div class="instructor-item">
                             <div class="instructor-inner">
                                 <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/03.jpg" alt="instructor">
+                                <img src="{{asset('frontend/assets/images/instructor/instructor.jpg')}}"
+                                style="height:90px" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
                                     <a href="team-single.html"><h4>Oliver Porter</h4></a>
@@ -721,7 +723,8 @@
                         <div class="instructor-item">
                             <div class="instructor-inner">
                                 <div class="instructor-thumb">
-                                    <img src="assets/images/instructor/04.jpg" alt="instructor">
+                                <img src="{{asset('frontend/assets/images/instructor/instructor.jpg')}}"
+                                style="height:90px" alt="instructor">
                                 </div>
                                 <div class="instructor-content">
                                     <a href="team-single.html"><h4>Nahla Jones</h4></a>
@@ -753,7 +756,7 @@
     <!-- Instructors Section Ending Here -->
 
 
-    <!-- student feedbak section start here -->
+    <!-- student feedbak section start here
     <div class="student-feedbak-section padding-tb shape-img">
         <div class="container">
             <div class="section-header text-center">
@@ -830,7 +833,7 @@
             </div>
         </div>
     </div>
-    <!-- student feedbak section ending here -->
+ student feedbak section ending here -->
 
 
     <!-- blog section start here -->
@@ -1010,7 +1013,7 @@
                                     <div class="achieve-content">
                                         <h4>If You Join Our Course</h4>
                                         <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                        <a href="#" class="lab-btn" style="color:#ed3532;"><span>Register For Free</span></a>
+                                        <a href="#" class="lab-btn" style="background-color:#ffa600;"><span>Register For Free</span></a>
                                     </div>
                                 </div>
                             </div>
