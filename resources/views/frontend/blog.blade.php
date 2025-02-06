@@ -1,67 +1,41 @@
 
 @extends('frontend.master')
 
-@section('title', 'Home - Edukon')
 
 @section('content')
 
 <style>
-.pageheader-section {
+    .pageheader-section {
     position: relative;
-    height: 500px;
-    overflow: hidden;
+    background-image: url('{{ asset('assets/images/cover2.jpg') }}');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 }
 
 .pageheader-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('{{ asset('assets/images/international-cover1.jpeg') }}');
+    background-image: inherit;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(5px);
-    z-index: 1;
+    filter: blur(2px);
+    z-index: -1; 
 }
-
-.pageheader-content {
-    position: relative;
-    z-index: 2;
-    padding-top: 150px;
-    color: white;
-    text-align: center;
-}
-
-.breadcrumb-item a {
-    color: white;
-}
-
-.pageheader-content h2 {
-    color:rgb(255, 252, 251); /* Replace this with your desired color code */
-    font-weight: bold; /* Optional: To make the text bold */
-}
-
-.post-thumb img {
-    width: 100%; /* Ensures the image takes full width of the parent */
-    height: auto; /* Maintains the aspect ratio */
-    object-fit: cover; /* Crops the image to fit its container */
-    display: block; /* Removes any extra space below the image */
-}
-
-
 
 </style>
 
-    <!-- Page Header section start here -->
-    <div class="pageheader-section">
+  <!-- Page Header section start here -->
+  <div class="pageheader-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="pageheader-content text-center">
-                        <h2>Our Blog Posts</h2>
+                        <h2  style="color:white !important">Our Blog Posts</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -116,7 +90,7 @@
                                     <a href="blog-single.html"><img src="assets/images/blog/2.jpg" alt="blog thumb" class="responsive-img" style="width:600px; height:270px"></a>
                                 </div>
                                 <div class="post-content">
-                                    <a href="blog-single.html"><h4 style ="color:rgb(27, 41, 84); "  onmouseover="this.style.color=' rgb(237, 53, 50)';" onmouseout="this.style.color='rgb(27, 41, 84)';">The Patriarchal Society.</h4></a>
+                                    <a href="blog-single.html"><h4 style ="color:rgb(27, 41, 84); "  onmouseover="this.style.color=' rgb(237, 128, 30)';" onmouseout="this.style.color='rgb(27, 41, 84)';">The Patriarchal Society.</h4></a>
                                     <div class="meta-post">
                                         <ul class="lab-ul">
                                             <li><i class="icofont-ui-user" style="color: rgb(237, 128, 30);"></i>Begrass Tyson</li>
